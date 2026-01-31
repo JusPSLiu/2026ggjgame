@@ -10,12 +10,17 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
+	# Handles jump.
 	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	# Handles crouch.
+	if Input.is_action_just_pressed("ui_down"):
+		self.scale.x = 6
+		self.scale.y = 2
+		self.position.y += ($CollisionShape2D.shape.height)
+	if Input.is_action_just_released("ui_down"):
+		self.scale.x = 4
+		self.scale.y = 4
 
 	move_and_slide()

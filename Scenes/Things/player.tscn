@@ -1,15 +1,23 @@
 [gd_scene format=3 uid="uid://ccfhqh8b837fa"]
 
-[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_3eola"]
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://Scripts/player.gd" id="1_cf2ej"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0bb2n"]
 height = 32.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1281925854]
 scale = Vector2(4, 4)
-script = ExtResource("1_3eola")
+script = ExtResource("1_cf2ej")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=683198710]
 shape = SubResource("CapsuleShape2D_0bb2n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470809466]
+
+[node name="TEMP SPRITE" type="ColorRect" parent="." unique_id=926502988]
+offset_left = -8.25
+offset_top = -24.25
+offset_right = 6.75
+offset_bottom = 15.75
+color = Color(0.101869486, 0.75285375, 0, 1)
+metadata/_edit_use_anchors_ = true
