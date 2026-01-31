@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://bxruvlbqqvnbu"]
+
+[ext_resource type="Script" uid="uid://dn8dhxloddpt8" path="res://Scripts/UI/transition.gd" id="1_m76rg"]
+
+[sub_resource type="Animation" id="Animation_s2c3o"]
+resource_name = "FadeIn"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.33333334),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [1.5707964, 3.141592653589793]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_6pedr"]
+resource_name = "FadeOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [-1.5707963267948966, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_syfuq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5707964]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ma218"]
+_data = {
+&"FadeIn": SubResource("Animation_s2c3o"),
+&"FadeOut": SubResource("Animation_6pedr"),
+&"RESET": SubResource("Animation_syfuq")
+}
+
+[node name="Transition" type="Control" unique_id=116715743]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_m76rg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=686114687]
+libraries/ = SubResource("AnimationLibrary_ma218")
+autoplay = &"FadeIn"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1757639756]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 181.16064
+offset_bottom = 568.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+color = Color(0, 0, 0, 1)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://baaf6jwy83j0o"]
+
+[ext_resource type="PackedScene" uid="uid://bxruvlbqqvnbu" path="res://Scenes/Overlay/transition.tscn" id="1_po227"]
+
+[node name="TitleScreen" type="Control" unique_id=736671996]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Transition" parent="." unique_id=116715743 instance=ExtResource("1_po227")]
+layout_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1963863739]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 191.0
+offset_right = 314.0
+offset_bottom = 222.0
+text = "Play"
