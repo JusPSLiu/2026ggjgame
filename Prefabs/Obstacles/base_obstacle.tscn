@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://etsis7nf34is"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
+
+[node name="BaseObstacle" type="StaticBody2D" unique_id=767947608]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=366360781]
+shape = SubResource("RectangleShape2D_81xng")
+one_way_collision = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1935367245]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(1, 0, 0, 1)

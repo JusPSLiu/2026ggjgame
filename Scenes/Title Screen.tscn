@@ -20,3 +20,5 @@ offset_top = 191.0
 offset_right = 314.0
 offset_bottom = 222.0
 text = "Play"
+
+[connection signal="pressed" from="Button" to="Transition" method="fadeToScene" binds= ["res://Scenes/level.tscn"]]

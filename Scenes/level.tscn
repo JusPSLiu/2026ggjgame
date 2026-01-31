@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dxon0mk8dgivo"]
+
+[ext_resource type="Script" uid="uid://dhuf43g0oc0qo" path="res://Scripts/regions/regions_controller.gd" id="1_tumq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51e2h"]
+size = Vector2(160, 20)
+
+[node name="level" type="Node2D" unique_id=1462267929]
+scale = Vector2(4, 4)
+
+[node name="CollisionBorder" type="StaticBody2D" parent="." unique_id=1262617687]
+
+[node name="floor" type="CollisionShape2D" parent="CollisionBorder" unique_id=1792834000]
+position = Vector2(80, 90)
+shape = SubResource("RectangleShape2D_51e2h")
+
+[node name="ceiliing" type="CollisionShape2D" parent="CollisionBorder" unique_id=1801620547]
+position = Vector2(80, 0)
+shape = SubResource("RectangleShape2D_51e2h")
+
+[node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
+script = ExtResource("1_tumq0")

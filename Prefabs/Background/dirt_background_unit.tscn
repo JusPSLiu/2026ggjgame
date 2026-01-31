@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://caml1341kphhs"]
+
+[ext_resource type="PackedScene" uid="uid://bbpv2b76nfspe" path="res://Prefabs/Background/background_unit.tscn" id="1_hxslo"]
+
+[node name="BackgroundUnit" unique_id=1076090912 instance=ExtResource("1_hxslo")]

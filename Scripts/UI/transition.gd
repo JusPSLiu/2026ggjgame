@@ -23,6 +23,7 @@ func _process(delta : float) -> void:
 func fadeToScene(scene : String):
 	if (scene.is_empty() or !ResourceLoader.exists(scene)):
 		print("ERROR, scene not found")
+		return
 	fadeOut()
 	await transitionPlayer.animation_finished
 	get_tree().change_scene_to_file(scene)
