@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bce7j5jksxl8h"]
+
+[ext_resource type="Script" uid="uid://c8scr01y6mpj3" path="res://Scripts/pause_screen.gd" id="1_1och7"]
+[ext_resource type="Script" uid="uid://bl1kqr0pawq37" path="res://Scripts/volume_controller.gd" id="2_bpi0q"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1046237245]
+process_mode = 3
+layer = 10
+visible = false
+script = ExtResource("1_1och7")
+
+[node name="background" type="ColorRect" parent="." unique_id=738903285]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.2509804)
+
+[node name="PauseScreen" type="Control" parent="." unique_id=1698485070]
+z_index = 200
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_bpi0q")
+
+[node name="Label" type="Label" parent="PauseScreen" unique_id=1487918616]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 1280.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 141
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen" unique_id=1925992063]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 232.0
+offset_right = 904.0
+offset_bottom = 936.0
+theme_override_constants/separation = 5
+
+[node name="ResumeButton" type="Button" parent="PauseScreen/VBoxContainer" unique_id=440072184]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Resume"
+
+[node name="Gap" type="Label" parent="PauseScreen/VBoxContainer" unique_id=1434428492]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+
+[node name="Music" type="Label" parent="PauseScreen/VBoxContainer" unique_id=787025544]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="PauseScreen/VBoxContainer" unique_id=1452410493]
+layout_mode = 2
+value = 5.0
+
+[node name="Sounds" type="Label" parent="PauseScreen/VBoxContainer" unique_id=1720501388]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Sounds"
+horizontal_alignment = 1
+
+[node name="SoundSlider" type="HSlider" parent="PauseScreen/VBoxContainer" unique_id=1355941545]
+layout_mode = 2
+
+[node name="Gap2" type="Label" parent="PauseScreen/VBoxContainer" unique_id=2126406385]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="Button" type="Button" parent="PauseScreen/VBoxContainer" unique_id=504361308]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Exit to Main Menu"
+
+[connection signal="pressed" from="PauseScreen/VBoxContainer/ResumeButton" to="." method="toggle_pause"]
+[connection signal="value_changed" from="PauseScreen/VBoxContainer/MusicSlider" to="PauseScreen" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="PauseScreen/VBoxContainer/SoundSlider" to="PauseScreen" method="_on_sound_slider_value_changed"]

@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var speed = 20.0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -12,12 +13,14 @@ var coyote = 0.1
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() or coyote > 0:
 		coyote -= delta
 		velocity += get_gravity() * delta
-	
 	else:
 		coyote = 0.1
+	
+	# handle speed (TODO: add raycast2d)
+	GlobalVariables.xpos += delta * speed
 
 	# Handles jump.
 	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up") and coyote > 0:
@@ -25,12 +28,12 @@ func _physics_process(delta: float) -> void:
 	
 	# Handles crouch.
 	if Input.is_action_just_pressed("ui_down"):
-		self.scale.x = 6
-		self.scale.y = 2
-		self.position.y += ($CollisionShape2D.shape.height)
+		self.global_scale.x = 6
+		self.global_scale.y = 2
+		self.global_position.y += ($CollisionShape2D.shape.height)
 	if Input.is_action_just_released("ui_down"):
-		self.scale.x = 4
-		self.scale.y = 4
+		self.global_scale.x = 4
+		self.global_scale.y = 4
 	
 	# Handles mask switching.
 	if Input.is_action_just_pressed("mask_1"): # J

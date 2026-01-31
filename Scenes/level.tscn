@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dxon0mk8dgivo"]
 
 [ext_resource type="Script" uid="uid://dhuf43g0oc0qo" path="res://Scripts/regions/regions_controller.gd" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://j43jbjtdv6gi" path="res://Prefabs/Regions/Dirt/dirt_1.tscn" id="2_81xng"]
+[ext_resource type="PackedScene" uid="uid://bce7j5jksxl8h" path="res://Scenes/Overlay/pause_menu.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://Scenes/Things/player.tscn" id="3_6phgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51e2h"]
 size = Vector2(160, 20)
@@ -20,3 +23,11 @@ shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
 script = ExtResource("1_tumq0")
+DirtRegions = Array[Resource]([ExtResource("2_81xng")])
+
+[node name="PauseMenu" parent="." unique_id=1851503900 instance=ExtResource("2_k5f4k")]
+
+[node name="Player" parent="." unique_id=1281925854 instance=ExtResource("3_6phgx")]
+position = Vector2(12, 64)
+scale = Vector2(1, 1)
+speed = 100.0
