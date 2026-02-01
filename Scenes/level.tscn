@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bce7j5jksxl8h" path="res://Scenes/Overlay/pause_menu.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://Scenes/Things/player.tscn" id="3_6phgx"]
 [ext_resource type="PackedScene" uid="uid://bxruvlbqqvnbu" path="res://Scenes/Overlay/transition.tscn" id="4_wqkje"]
+[ext_resource type="PackedScene" uid="uid://dcmu78ya3xhdb" path="res://Prefabs/Regions/Dirt/dirt_2.tscn" id="5_oqgf2"]
 [ext_resource type="Shader" uid="uid://bjskohy4loxwq" path="res://Scripts/shaders/pixelator.gdshader" id="7_8c0lf"]
+[ext_resource type="AudioStream" uid="uid://df68lses5nhdc" path="res://Audio/coin.wav" id="8_754fn"]
+[ext_resource type="Script" uid="uid://c4042imblo0s" path="res://Scripts/objects/coin_sfx.gd" id="9_bvt00"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_754fn"]
 shader = ExtResource("7_8c0lf")
@@ -76,7 +79,9 @@ shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
 script = ExtResource("1_tumq0")
-DirtRegions = Array[Resource]([ExtResource("2_81xng")])
+DirtRegions = Array[Resource]([ExtResource("2_81xng"), ExtResource("5_oqgf2")])
+debugEnabled = true
+debugTestONLY = 1
 
 [node name="PauseMenu" parent="." unique_id=1851503900 instance=ExtResource("2_k5f4k")]
 
@@ -88,5 +93,10 @@ visible = false
 [node name="Player" parent="." unique_id=1281925854 instance=ExtResource("3_6phgx")]
 position = Vector2(32, 70)
 scale = Vector2(1, 1)
+
+[node name="coin_sfx" type="AudioStreamPlayer" parent="." unique_id=1581080169]
+stream = ExtResource("8_754fn")
+bus = &"Sound"
+script = ExtResource("9_bvt00")
 
 [editable path="PauseMenu"]

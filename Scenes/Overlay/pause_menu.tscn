@@ -60,7 +60,9 @@ horizontal_alignment = 1
 
 [node name="MusicSlider" type="HSlider" parent="PauseScreen/VBoxContainer" unique_id=1452410493]
 layout_mode = 2
-value = 5.0
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="Sounds" type="Label" parent="PauseScreen/VBoxContainer" unique_id=1720501388]
 layout_mode = 2
@@ -70,6 +72,8 @@ horizontal_alignment = 1
 
 [node name="SoundSlider" type="HSlider" parent="PauseScreen/VBoxContainer" unique_id=1355941545]
 layout_mode = 2
+max_value = 1.0
+step = 0.01
 
 [node name="Gap2" type="Label" parent="PauseScreen/VBoxContainer" unique_id=2126406385]
 layout_mode = 2

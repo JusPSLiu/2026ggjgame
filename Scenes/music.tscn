@@ -3,5 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://cm4fthetvoej2" path="res://Audio/Music/ost.ogg" id="1_fbmny"]
 
 [node name="Music" type="AudioStreamPlayer" unique_id=1835183825]
+process_mode = 3
 stream = ExtResource("1_fbmny")
 autoplay = true
+bus = &"Music"

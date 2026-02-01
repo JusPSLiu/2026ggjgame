@@ -109,7 +109,7 @@ position = Vector2(960, 0)
 position = Vector2(992, 0)
 
 [node name="BaseObstacle" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("3_e675m")]
-position = Vector2(138, 73)
+position = Vector2(138, 74)
 
 [node name="BaseObstacle2" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="1" unique_id=253635985 instance=ExtResource("3_e675m")]
 position = Vector2(248, 74)
