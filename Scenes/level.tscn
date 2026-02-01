@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://Scenes/Things/player.tscn" id="3_6phgx"]
 [ext_resource type="PackedScene" uid="uid://bxruvlbqqvnbu" path="res://Scenes/Overlay/transition.tscn" id="4_wqkje"]
 [ext_resource type="PackedScene" uid="uid://dcmu78ya3xhdb" path="res://Prefabs/Regions/Dirt/dirt_2.tscn" id="5_oqgf2"]
+[ext_resource type="PackedScene" uid="uid://6r8jg1qgejjn" path="res://Prefabs/Regions/Dirt/dirt_3.tscn" id="6_2klc5"]
 [ext_resource type="Shader" uid="uid://bjskohy4loxwq" path="res://Scripts/shaders/pixelator.gdshader" id="7_8c0lf"]
+[ext_resource type="PackedScene" uid="uid://bbrqld3qp7ca8" path="res://Prefabs/Regions/Dirt/dirt_4.tscn" id="7_nngtn"]
 [ext_resource type="Script" uid="uid://cvnvsd43180h4" path="res://Scripts/UI/died.gd" id="7_qxfql"]
 [ext_resource type="AudioStream" uid="uid://df68lses5nhdc" path="res://Audio/coin.wav" id="8_754fn"]
 [ext_resource type="Script" uid="uid://c4042imblo0s" path="res://Scripts/objects/coin_sfx.gd" id="9_bvt00"]
@@ -84,9 +86,9 @@ shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
 script = ExtResource("1_tumq0")
-DirtRegions = Array[Resource]([ExtResource("2_81xng"), ExtResource("5_oqgf2")])
+DirtRegions = Array[Resource]([ExtResource("2_81xng"), ExtResource("5_oqgf2"), ExtResource("6_2klc5"), ExtResource("7_nngtn")])
 debugEnabled = true
-debugTestONLY = 1
+debugTestONLY = 3
 
 [node name="PauseMenu" parent="." unique_id=1851503900 instance=ExtResource("2_k5f4k")]
 

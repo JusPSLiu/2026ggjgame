@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_hnwdg"]
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_ekt7j"]
-[ext_resource type="Script" uid="uid://djd78l4f65muj" path="res://Scripts/regions/background_unit.gd" id="3_0n8q6"]
 [ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="4_8d8bo"]
 [ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="5_tfh71"]
 [ext_resource type="Texture2D" uid="uid://boiqb5y7lvyrp" path="res://Art/Obstacles/building/one_story.png" id="6_17ij8"]
@@ -22,57 +21,44 @@ region_length = 14
 [node name="Label" parent="ObstacleScaler" index="0" unique_id=177015975]
 text = "Region Length: 14"
 
-[node name="BackgroundUnit2" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit2" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_ekt7j")]
 position = Vector2(32, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit3" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=1563466980 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit3" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=1563466980 instance=ExtResource("2_ekt7j")]
 position = Vector2(64, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit4" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=259743702 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit4" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=259743702 instance=ExtResource("2_ekt7j")]
 position = Vector2(96, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit5" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=787170833 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit5" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=787170833 instance=ExtResource("2_ekt7j")]
 position = Vector2(128, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit6" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=403834594 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit6" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=403834594 instance=ExtResource("2_ekt7j")]
 position = Vector2(160, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit7" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=61644229 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit7" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=61644229 instance=ExtResource("2_ekt7j")]
 position = Vector2(192, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit8" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=1462989236 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit8" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=1462989236 instance=ExtResource("2_ekt7j")]
 position = Vector2(224, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit9" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=1810446838 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit9" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=1810446838 instance=ExtResource("2_ekt7j")]
 position = Vector2(256, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit10" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=1767533934 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit10" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=1767533934 instance=ExtResource("2_ekt7j")]
 position = Vector2(288, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit11" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=1178083417 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit11" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=1178083417 instance=ExtResource("2_ekt7j")]
 position = Vector2(320, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit12" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=1443986181 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit12" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=1443986181 instance=ExtResource("2_ekt7j")]
 position = Vector2(352, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit13" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="12" unique_id=1135486038 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit13" parent="Background" parent_id_path=PackedInt32Array(821254973) index="12" unique_id=1135486038 instance=ExtResource("2_ekt7j")]
 position = Vector2(384, 0)
-script = ExtResource("3_0n8q6")
 
-[node name="BackgroundUnit14" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="13" unique_id=1079266595 instance=ExtResource("2_ekt7j")]
+[node name="BackgroundUnit14" parent="Background" parent_id_path=PackedInt32Array(821254973) index="13" unique_id=1079266595 instance=ExtResource("2_ekt7j")]
 position = Vector2(416, 0)
-script = ExtResource("3_0n8q6")
 
 [node name="BaseObstacle" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("4_8d8bo")]
 position = Vector2(148, 74)

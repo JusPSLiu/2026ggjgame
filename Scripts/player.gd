@@ -73,15 +73,43 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mask_1"): # J
 		# CHANGE THE CURRENT SPRITE FOR THE MASK
 		SignalBus.setmask.emit(0) # set the UI
+		if mask == 1:
+			mask = 0
+			MAX_SPEED = 100
+			SignalBus.setmask.emit(-1)
+		else:
+			mask = 1
 	
 	if Input.is_action_just_pressed("mask_2"): # K
 		# CHANGE THE CURRENT SPRITE FOR THE MASK
 		SignalBus.setmask.emit(1) # set the UI
-		pass
+		if mask == 2:
+			mask = 0
+			MAX_SPEED = 100
+			SignalBus.setmask.emit(-1)
+		else:
+			mask = 2
 	
 	if Input.is_action_just_pressed("mask_3"): # L
 		# CHANGE THE CURRENT SPRITE FOR THE MASK
 		SignalBus.setmask.emit(2) # set the UI
+		if mask == 3:
+			mask = 0
+			SignalBus.setmask.emit(-1)
+		else:
+			mask = 3
+	
+	match(mask):
+		1: # Fox
+			if is_on_floor():
+				MAX_SPEED = 110
+			else:
+				MAX_SPEED = 100
+		2: # Bird
+			if !is_on_floor():
+				MAX_SPEED = 120
+			else:
+				MAX_SPEED = 100
 
 	# slide (and reset position)
 	move_and_slide()

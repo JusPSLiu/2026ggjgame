@@ -124,4 +124,25 @@ texture = ExtResource("4_yqdep")
 [node name="Coin" parent="Obstacles/BaseObstacle3" index="4" unique_id=1249391020 instance=ExtResource("5_ctgvm")]
 position = Vector2(37.25, -22.5)
 
+[node name="BaseObstacle4" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="3" unique_id=1368782579 instance=ExtResource("3_e675m")]
+position = Vector2(421.5, 73)
+
+[node name="BaseObstacle5" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="4" unique_id=202512806 instance=ExtResource("3_e675m")]
+position = Vector2(437, 73.25)
+
+[node name="BaseObstacle6" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="5" unique_id=538631605 instance=ExtResource("3_e675m")]
+position = Vector2(428.25, 60.75)
+
+[node name="BaseObstacle7" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="6" unique_id=1264176972 instance=ExtResource("3_e675m")]
+position = Vector2(586.25, 72.75)
+
+[node name="BaseObstacle8" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="7" unique_id=1168402307 instance=ExtResource("3_e675m")]
+position = Vector2(797.75, 72)
+
+[node name="BaseObstacle" parent="." index="3" unique_id=1437042531 instance=ExtResource("3_e675m")]
+position = Vector2(765.75, 72.5)
+
+[node name="BaseObstacle2" parent="." index="4" unique_id=1143438893 instance=ExtResource("3_e675m")]
+position = Vector2(936.75, 72.75)
+
 [editable path="Obstacles/BaseObstacle3"]
