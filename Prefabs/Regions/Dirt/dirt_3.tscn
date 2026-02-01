@@ -3,8 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_41tk4"]
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_0s4xd"]
 [ext_resource type="PackedScene" uid="uid://bavf52o0icic0" path="res://Prefabs/Obstacles/single_box.tscn" id="4_0s4xd"]
+[ext_resource type="Texture2D" uid="uid://5txarrawww3n" path="res://Art/Obstacles/box2.png" id="4_wwxtk"]
 [ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="5_8jcny"]
 [ext_resource type="PackedScene" uid="uid://d0bmxv6xgx70o" path="res://Scenes/Things/coin.tscn" id="6_wwxtk"]
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="7_g53an"]
 
 [node name="Dirt3" unique_id=1860413097 instance=ExtResource("1_41tk4")]
 length = 16
@@ -135,6 +137,13 @@ position = Vector2(376.5, 62.75)
 [node name="BaseObstacle25" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="24" unique_id=1265452899 instance=ExtResource("4_0s4xd")]
 position = Vector2(328.5, 48.5)
 
+[node name="ColorRect2" parent="Obstacles/BaseObstacle25" index="2" unique_id=1667890641]
+position = Vector2(7, 111.25)
+
+[node name="Box2" type="Sprite2D" parent="Obstacles/BaseObstacle25" index="3" unique_id=437446605]
+position = Vector2(8.25, 6.25)
+texture = ExtResource("4_wwxtk")
+
 [node name="BaseObstacle26" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="25" unique_id=940326999 instance=ExtResource("4_0s4xd")]
 position = Vector2(344.5, 48.75)
 
@@ -151,6 +160,9 @@ position = Vector2(440.5, 25.5)
 position = Vector2(8, 18)
 texture = ExtResource("5_8jcny")
 
+[node name="ColorRect2" parent="Obstacles/BaseObstacle29" index="3" unique_id=1667890641]
+position = Vector2(6, -85.75)
+
 [node name="Coin" parent="Obstacles/BaseObstacle29" index="4" unique_id=1249391020 instance=ExtResource("6_wwxtk")]
 position = Vector2(-35, 48.5)
 
@@ -164,5 +176,24 @@ texture = ExtResource("5_8jcny")
 [node name="Coin" parent="Obstacles/BaseObstacle30" index="4" unique_id=1320825768 instance=ExtResource("6_wwxtk")]
 position = Vector2(25, 13.75)
 
+[node name="Box2" type="Sprite2D" parent="Obstacles/BaseObstacle30" index="5" unique_id=765573827]
+position = Vector2(103.25, 23.5)
+texture = ExtResource("4_wwxtk")
+
+[node name="BaseObstacle31" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="30" unique_id=30172488 instance=ExtResource("7_g53an")]
+position = Vector2(121, 72)
+
+[node name="Box2" type="Sprite2D" parent="Obstacles/BaseObstacle31" index="2" unique_id=2026825285]
+position = Vector2(7.5, 6)
+texture = ExtResource("4_wwxtk")
+
+[node name="BaseObstacle32" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="31" unique_id=316676911 instance=ExtResource("7_g53an")]
+position = Vector2(249.25, 61)
+
+[node name="Box2" type="Sprite2D" parent="Obstacles/BaseObstacle32" index="2" unique_id=1355696036]
+position = Vector2(7.5, 6)
+texture = ExtResource("4_wwxtk")
+
+[editable path="Obstacles/BaseObstacle25"]
 [editable path="Obstacles/BaseObstacle29"]
 [editable path="Obstacles/BaseObstacle30"]

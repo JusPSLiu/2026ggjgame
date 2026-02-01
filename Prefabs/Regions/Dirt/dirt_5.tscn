@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://cfwawvy0vcq87"]
+
+[ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_o3003"]
+[ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_e4nij"]
+[ext_resource type="Script" uid="uid://djd78l4f65muj" path="res://Scripts/regions/background_unit.gd" id="3_3qa68"]
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="4_cdbxl"]
+[ext_resource type="Texture2D" uid="uid://boiqb5y7lvyrp" path="res://Art/Obstacles/building/one_story.png" id="5_rv62x"]
+[ext_resource type="Texture2D" uid="uid://bmf0l56eftoii" path="res://Art/Obstacles/building/awning_long.png" id="6_axi0s"]
+[ext_resource type="Texture2D" uid="uid://d3owqlk0biu11" path="res://Art/Obstacles/building/awning_short.png" id="7_d7h88"]
+[ext_resource type="PackedScene" uid="uid://d0bmxv6xgx70o" path="res://Scenes/Things/coin.tscn" id="8_0c8bo"]
+[ext_resource type="PackedScene" uid="uid://bavf52o0icic0" path="res://Prefabs/Obstacles/single_box.tscn" id="9_e4nij"]
+[ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="10_3qa68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5vhf"]
+size = Vector2(25.5, 3.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
+size = Vector2(20, 3)
+
+[node name="Dirt5" unique_id=1860413097 instance=ExtResource("1_o3003")]
+length = 16
+
+[node name="ObstacleScaler" parent="." index="0" unique_id=550516647]
+region_length = 16
+
+[node name="Label" parent="ObstacleScaler" index="0" unique_id=177015975]
+text = "Region Length: 16"
+
+[node name="BackgroundUnit2" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_e4nij")]
+position = Vector2(32, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit3" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=468334023 instance=ExtResource("2_e4nij")]
+position = Vector2(64, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit4" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=1221496575 instance=ExtResource("2_e4nij")]
+position = Vector2(96, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit5" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=1489920464 instance=ExtResource("2_e4nij")]
+position = Vector2(128, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit6" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=638582814 instance=ExtResource("2_e4nij")]
+position = Vector2(160, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit7" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=1142389134 instance=ExtResource("2_e4nij")]
+position = Vector2(192, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit8" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=1168593880 instance=ExtResource("2_e4nij")]
+position = Vector2(224, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit9" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=390287801 instance=ExtResource("2_e4nij")]
+position = Vector2(256, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit10" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=831997703 instance=ExtResource("2_e4nij")]
+position = Vector2(288, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit11" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=1023784405 instance=ExtResource("2_e4nij")]
+position = Vector2(320, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit12" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=1987449751 instance=ExtResource("2_e4nij")]
+position = Vector2(352, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit13" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="12" unique_id=456167300 instance=ExtResource("2_e4nij")]
+position = Vector2(384, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit14" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="13" unique_id=849618957 instance=ExtResource("2_e4nij")]
+position = Vector2(416, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit15" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="14" unique_id=1761790671 instance=ExtResource("2_e4nij")]
+position = Vector2(448, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BackgroundUnit16" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="15" unique_id=582256829 instance=ExtResource("2_e4nij")]
+position = Vector2(480, 0)
+script = ExtResource("3_3qa68")
+
+[node name="BaseObstacle2" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("4_cdbxl")]
+position = Vector2(198, 72)
+
+[node name="CollisionShape2D" parent="Obstacles/BaseObstacle2/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="0" unique_id=366360781]
+position = Vector2(80.75, -28.25)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/BaseObstacle2/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="1" unique_id=422603235]
+position = Vector2(25.125, -27.875)
+shape = SubResource("RectangleShape2D_f5vhf")
+one_way_collision = true
+one_way_collision_margin = 5.0
+
+[node name="CollisionShape2D" parent="Obstacles/BaseObstacle2/LeftColliders" parent_id_path=PackedInt32Array(148272063, 1654863702) index="0" unique_id=619730459]
+position = Vector2(-4.5, 33.5)
+
+[node name="OneStory" type="Sprite2D" parent="Obstacles/BaseObstacle2" index="2" unique_id=226788958]
+position = Vector2(52, -10)
+texture = ExtResource("5_rv62x")
+
+[node name="AwningLong" type="Sprite2D" parent="Obstacles/BaseObstacle2" index="3" unique_id=1447325904]
+position = Vector2(40, -8)
+texture = ExtResource("6_axi0s")
+
+[node name="AwningShort" type="Sprite2D" parent="Obstacles/BaseObstacle2" index="4" unique_id=1449301257]
+position = Vector2(96.5, -9)
+texture = ExtResource("7_d7h88")
+
+[node name="Coin" parent="Obstacles/BaseObstacle2" index="5" unique_id=1249391020 instance=ExtResource("8_0c8bo")]
+position = Vector2(16.5, 4)
+
+[node name="Coin2" parent="Obstacles/BaseObstacle2" index="6" unique_id=240207089 instance=ExtResource("8_0c8bo")]
+position = Vector2(56.75, -1.5)
+
+[node name="Coin3" parent="Obstacles/BaseObstacle2" index="7" unique_id=1694524953 instance=ExtResource("8_0c8bo")]
+position = Vector2(96, 4.5)
+
+[node name="BaseObstacle4" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="1" unique_id=1662517560 instance=ExtResource("9_e4nij")]
+position = Vector2(168.75, 72)
+
+[node name="BaseObstacle5" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="2" unique_id=1334803781 instance=ExtResource("9_e4nij")]
+position = Vector2(184.25, 72.25)
+
+[node name="BaseObstacle3" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="3" unique_id=344592712 instance=ExtResource("9_e4nij")]
+position = Vector2(157, 72)
+
+[node name="BaseObstacle6" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="4" unique_id=1617394868 instance=ExtResource("9_e4nij")]
+position = Vector2(163.5, 60.25)
+
+[node name="BaseObstacle7" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="5" unique_id=679495868 instance=ExtResource("4_cdbxl")]
+position = Vector2(398, 68.5)
+
+[node name="OneStory" type="Sprite2D" parent="Obstacles/BaseObstacle7" index="0" unique_id=1836770969]
+position = Vector2(52, -10)
+texture = ExtResource("5_rv62x")
+
+[node name="AwningShort" type="Sprite2D" parent="Obstacles/BaseObstacle7" index="1" unique_id=1180618471]
+position = Vector2(96.5, -9)
+texture = ExtResource("7_d7h88")
+
+[node name="AwningShort2" type="Sprite2D" parent="Obstacles/BaseObstacle7" index="2" unique_id=497513572]
+position = Vector2(26.75, -8.5)
+texture = ExtResource("7_d7h88")
+
+[node name="CollisionShape2D" parent="Obstacles/BaseObstacle7/TopColliders" parent_id_path=PackedInt32Array(679495868, 767947608) index="0" unique_id=366360781]
+position = Vector2(84.5, -28.5)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/BaseObstacle7/TopColliders" parent_id_path=PackedInt32Array(679495868, 767947608) index="1" unique_id=2017915532]
+position = Vector2(14.75, -28)
+shape = SubResource("RectangleShape2D_81xng")
+one_way_collision = true
+one_way_collision_margin = 5.0
+
+[node name="CollisionShape2D" parent="Obstacles/BaseObstacle7/LeftColliders" parent_id_path=PackedInt32Array(679495868, 1654863702) index="0" unique_id=619730459]
+position = Vector2(-4.5, 33.5)
+
+[node name="BaseObstacle8" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="6" unique_id=560024334 instance=ExtResource("9_e4nij")]
+position = Vector2(177.75, 60.75)
+
+[node name="BaseObstacle10" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="7" unique_id=1018079405 instance=ExtResource("9_e4nij")]
+position = Vector2(450.25, 43.5)
+
+[node name="Box" type="Sprite2D" parent="Obstacles/BaseObstacle10" index="2" unique_id=825369046]
+position = Vector2(8, 18)
+texture = ExtResource("10_3qa68")
+
+[node name="Coin" parent="Obstacles/BaseObstacle10" index="4" unique_id=2057152423 instance=ExtResource("8_0c8bo")]
+position = Vector2(5, -20.5)
+
+[editable path="Obstacles/BaseObstacle2"]
+[editable path="Obstacles/BaseObstacle7"]
+[editable path="Obstacles/BaseObstacle10"]

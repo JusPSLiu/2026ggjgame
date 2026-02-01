@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://baiyq0278yc15"]
+
+[ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_t03v6"]
+[ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_mtorr"]
+[ext_resource type="Script" uid="uid://djd78l4f65muj" path="res://Scripts/regions/background_unit.gd" id="3_xu5yn"]
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="4_i0orm"]
+[ext_resource type="PackedScene" uid="uid://d0bmxv6xgx70o" path="res://Scenes/Things/coin.tscn" id="5_jcyk0"]
+[ext_resource type="Texture2D" uid="uid://5txarrawww3n" path="res://Art/Obstacles/box2.png" id="6_qycay"]
+
+[node name="CoinRegion" unique_id=1860413097 instance=ExtResource("1_t03v6")]
+length = 12
+
+[node name="ObstacleScaler" parent="." index="0" unique_id=550516647]
+region_length = 12
+
+[node name="Label" parent="ObstacleScaler" index="0" unique_id=177015975]
+text = "Region Length: 12"
+
+[node name="BackgroundUnit2" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_mtorr")]
+position = Vector2(32, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit3" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=196617570 instance=ExtResource("2_mtorr")]
+position = Vector2(64, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit4" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=1585084823 instance=ExtResource("2_mtorr")]
+position = Vector2(96, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit5" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=228441184 instance=ExtResource("2_mtorr")]
+position = Vector2(128, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit6" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=938057943 instance=ExtResource("2_mtorr")]
+position = Vector2(160, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit7" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=57196992 instance=ExtResource("2_mtorr")]
+position = Vector2(192, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit8" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=1806193485 instance=ExtResource("2_mtorr")]
+position = Vector2(224, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit9" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=1441172411 instance=ExtResource("2_mtorr")]
+position = Vector2(256, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit10" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=175177957 instance=ExtResource("2_mtorr")]
+position = Vector2(288, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit11" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=731936610 instance=ExtResource("2_mtorr")]
+position = Vector2(320, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BackgroundUnit12" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=905289807 instance=ExtResource("2_mtorr")]
+position = Vector2(352, 0)
+script = ExtResource("3_xu5yn")
+
+[node name="BaseObstacle" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("4_i0orm")]
+position = Vector2(330.75, 69.75)
+
+[node name="Coin" parent="Obstacles/BaseObstacle" index="2" unique_id=1249391020 instance=ExtResource("5_jcyk0")]
+position = Vector2(-56.5, 2.75)
+
+[node name="Coin2" parent="Obstacles/BaseObstacle" index="3" unique_id=2060309113 instance=ExtResource("5_jcyk0")]
+position = Vector2(-56.5, -46.25)
+
+[node name="Coin3" parent="Obstacles/BaseObstacle" index="4" unique_id=635002910 instance=ExtResource("5_jcyk0")]
+position = Vector2(-56.5, -21)
+
+[node name="Coin4" parent="Obstacles/BaseObstacle" index="5" unique_id=640666777 instance=ExtResource("5_jcyk0")]
+position = Vector2(-24, -3)
+
+[node name="Coin5" parent="Obstacles/BaseObstacle" index="6" unique_id=1635543695 instance=ExtResource("5_jcyk0")]
+position = Vector2(-24, -52)
+
+[node name="Coin6" parent="Obstacles/BaseObstacle" index="7" unique_id=151684564 instance=ExtResource("5_jcyk0")]
+position = Vector2(-24, -26.75)
+
+[node name="Coin7" parent="Obstacles/BaseObstacle" index="8" unique_id=585332139 instance=ExtResource("5_jcyk0")]
+position = Vector2(-120.75, 2.75)
+
+[node name="Coin8" parent="Obstacles/BaseObstacle" index="9" unique_id=1055642552 instance=ExtResource("5_jcyk0")]
+position = Vector2(-120.75, -46.25)
+
+[node name="Coin9" parent="Obstacles/BaseObstacle" index="10" unique_id=1161476129 instance=ExtResource("5_jcyk0")]
+position = Vector2(-120.75, -21)
+
+[node name="Coin10" parent="Obstacles/BaseObstacle" index="11" unique_id=1234748855 instance=ExtResource("5_jcyk0")]
+position = Vector2(-88.25, -3)
+
+[node name="Coin11" parent="Obstacles/BaseObstacle" index="12" unique_id=638607657 instance=ExtResource("5_jcyk0")]
+position = Vector2(-88.25, -52)
+
+[node name="Coin12" parent="Obstacles/BaseObstacle" index="13" unique_id=88037365 instance=ExtResource("5_jcyk0")]
+position = Vector2(-88.25, -26.75)
+
+[node name="Box2" type="Sprite2D" parent="Obstacles/BaseObstacle" index="14" unique_id=619418574]
+position = Vector2(8, 6)
+texture = ExtResource("6_qycay")

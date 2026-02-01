@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var MAX_SPEED = 100.0
 @export var DEATH_SPEED = 100.0
+@export var BIRD_JUMP = 1
 const JUMP_VELOCITY = -600.0
 const GRAVITY_MULTIPLIER = 2.0
 
@@ -40,7 +41,7 @@ func _physics_process(delta: float) -> void:
 			if (Input.is_action_pressed("ui_up")):
 				fallRate = 1.0
 			else: fallRate = 2.0
-		velocity += get_gravity() * delta * GRAVITY_MULTIPLIER * fallRate
+		velocity += get_gravity() * delta * GRAVITY_MULTIPLIER * fallRate * BIRD_JUMP
 	else:
 		coyote = 0.1
 	
@@ -71,33 +72,41 @@ func _physics_process(delta: float) -> void:
 	
 	# Handles mask switching.
 	if Input.is_action_just_pressed("mask_1"): # J
-		# CHANGE THE CURRENT SPRITE FOR THE MASK
-		SignalBus.setmask.emit(0) # set the UI
-		if mask == 1:
-			mask = 0
-			MAX_SPEED = 100
-			SignalBus.setmask.emit(-1)
-		else:
-			mask = 1
+		# Cannot switch mask if another is equipped:
+		if mask == 0 or mask == 1:
+			# CHANGE THE CURRENT SPRITE FOR THE MASK
+			SignalBus.setmask.emit(0) # set the UI
+			if mask == 1:
+				mask = 0
+				MAX_SPEED = 100
+				SignalBus.setmask.emit(-1)
+			else:
+				mask = 1
 	
 	if Input.is_action_just_pressed("mask_2"): # K
-		# CHANGE THE CURRENT SPRITE FOR THE MASK
-		SignalBus.setmask.emit(1) # set the UI
-		if mask == 2:
-			mask = 0
-			MAX_SPEED = 100
-			SignalBus.setmask.emit(-1)
-		else:
-			mask = 2
+		# Cannot switch mask if another is equipped:
+		if mask == 0 or mask == 2:
+			# CHANGE THE CURRENT SPRITE FOR THE MASK
+			SignalBus.setmask.emit(1) # set the UI
+			if mask == 2:
+				mask = 0
+				BIRD_JUMP = 1
+				MAX_SPEED = 100
+				SignalBus.setmask.emit(-1)
+			else:
+				BIRD_JUMP = 0.75
+				mask = 2
 	
 	if Input.is_action_just_pressed("mask_3"): # L
-		# CHANGE THE CURRENT SPRITE FOR THE MASK
-		SignalBus.setmask.emit(2) # set the UI
-		if mask == 3:
-			mask = 0
-			SignalBus.setmask.emit(-1)
-		else:
-			mask = 3
+		# Cannot switch mask if another is equipped:
+		if mask == 0 or mask == 2:
+			# CHANGE THE CURRENT SPRITE FOR THE MASK
+			SignalBus.setmask.emit(2) # set the UI
+			if mask == 2:
+				mask = 0
+				SignalBus.setmask.emit(-1)
+			else:
+				mask = 2
 	
 	match(mask):
 		1: # Fox
