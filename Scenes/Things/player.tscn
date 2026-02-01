@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://Scripts/player.gd" id="1_cf2ej"]
 [ext_resource type="Texture2D" uid="uid://c0528k7o4nkwd" path="res://Art/Spritesheets/player_run.png" id="2_nyesc"]
 [ext_resource type="Texture2D" uid="uid://cpftiqt1vti0h" path="res://Art/Spritesheets/mask_fox.png" id="3_b2owl"]
+[ext_resource type="Texture2D" uid="uid://b7ro3igq6tx7c" path="res://Art/Spritesheets/mask_bird.png" id="3_pxj2o"]
+[ext_resource type="Texture2D" uid="uid://cyhfpo6c1pm73" path="res://Art/Spritesheets/mask_robot.png" id="4_yjyal"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0bb2n"]
 height = 32.0
@@ -132,6 +134,7 @@ _data = {
 scale = Vector2(4, 4)
 collision_mask = 3
 script = ExtResource("1_cf2ej")
+mask_textures = Array[Texture2D]([ExtResource("3_b2owl"), ExtResource("3_pxj2o"), ExtResource("4_yjyal")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=683198710]
 shape = SubResource("CapsuleShape2D_0bb2n")

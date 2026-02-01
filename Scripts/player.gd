@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @export var MAX_SPEED = 100.0
 @export var DEATH_SPEED = 100.0
+@export var BIRD_JUMP = 1
+@export var mask_textures : Array[Texture2D]
+
 const JUMP_VELOCITY = -600.0
 const GRAVITY_MULTIPLIER = 2.0
 
@@ -19,6 +22,12 @@ var dead : bool = false
 func _ready():
 	GlobalVariables.deathpos = -60
 	GlobalVariables.xpos = 0
+	
+	# fox mask by default
+	if mask != 1:
+		# CHANGE THE CURRENT SPRITE FOR THE MASK
+		SignalBus.setmask.emit(0) # set the UI
+		mask = 1
 
 
 func _physics_process(delta: float) -> void:
@@ -41,7 +50,7 @@ func _physics_process(delta: float) -> void:
 			if (Input.is_action_pressed("ui_up")):
 				fallRate = 1.0
 			else: fallRate = 2.0
-		velocity += get_gravity() * delta * GRAVITY_MULTIPLIER * fallRate
+		velocity += get_gravity() * delta * GRAVITY_MULTIPLIER * fallRate * BIRD_JUMP
 		# in air, play fall anim
 		if (velocity.y > 0 and (!animator.is_playing() or animator.current_animation == "run")):
 			animator.play("fall")
@@ -77,48 +86,53 @@ func _physics_process(delta: float) -> void:
 		self.global_scale.x = 4
 		self.global_scale.y = 4
 	
-	# Handles mask switching.
+	#region Mask Switching.
 	if Input.is_action_just_pressed("mask_1"): # J
-		# CHANGE THE CURRENT SPRITE FOR THE MASK
-		SignalBus.setmask.emit(0) # set the UI
-		if mask == 1:
-			mask = 0
-			MAX_SPEED = 100
-			SignalBus.setmask.emit(-1)
-		else:
+		# Fox
+		if mask != 1:
+			# CHANGE THE CURRENT SPRITE FOR THE MASK
+			$MaskSprite.texture = mask_textures[0]
+			SignalBus.setmask.emit(0) # set the UI
+			GlobalVariables.currMask = 0
+			BIRD_JUMP = 1
 			mask = 1
 	
 	if Input.is_action_just_pressed("mask_2"): # K
-		# CHANGE THE CURRENT SPRITE FOR THE MASK
-		SignalBus.setmask.emit(1) # set the UI
-		if mask == 2:
-			mask = 0
-			MAX_SPEED = 100
-			SignalBus.setmask.emit(-1)
-		else:
+		# Bird
+		if mask != 2:
+			# CHANGE THE CURRENT SPRITE FOR THE MASK
+			$MaskSprite.texture = mask_textures[1]
+			SignalBus.setmask.emit(1) # set the UI
+			GlobalVariables.currMask = 0
+			BIRD_JUMP = 0.75
 			mask = 2
 	
 	if Input.is_action_just_pressed("mask_3"): # L
-		# CHANGE THE CURRENT SPRITE FOR THE MASK
-		SignalBus.setmask.emit(2) # set the UI
-		if mask == 3:
-			mask = 0
-			SignalBus.setmask.emit(-1)
-		else:
+		# Robot
+		if mask != 3:
+			# CHANGE THE CURRENT SPRITE FOR THE MASK
+			$MaskSprite.texture = mask_textures[2]
+			SignalBus.setmask.emit(2) # set the UI
+			GlobalVariables.currMask = 0
+			BIRD_JUMP = 1
 			mask = 3
+	#endregion
 	
+	# MASK PHYSICS QUIRKS
 	match(mask):
 		1: # Fox
 			if is_on_floor():
-				MAX_SPEED = 110
+				MAX_SPEED = 105
 			else:
 				MAX_SPEED = 100
 		2: # Bird
 			if !is_on_floor():
-				MAX_SPEED = 120
+				MAX_SPEED = 105
 			else:
 				MAX_SPEED = 100
-
+		_: # Default
+			MAX_SPEED = 100
+	
 	# slide (and reset position)
 	move_and_slide()
 	global_position.x = my_pos_x

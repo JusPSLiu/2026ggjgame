@@ -3,9 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_41tk4"]
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_0s4xd"]
 [ext_resource type="PackedScene" uid="uid://bavf52o0icic0" path="res://Prefabs/Obstacles/single_box.tscn" id="4_0s4xd"]
+[ext_resource type="Texture2D" uid="uid://5txarrawww3n" path="res://Art/Obstacles/box2.png" id="4_wwxtk"]
 [ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="5_8jcny"]
 [ext_resource type="Texture2D" uid="uid://5txarrawww3n" path="res://Art/Obstacles/box2.png" id="5_wwxtk"]
 [ext_resource type="PackedScene" uid="uid://d0bmxv6xgx70o" path="res://Scenes/Things/coin.tscn" id="6_wwxtk"]
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="7_g53an"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e56bg"]
 size = Vector2(139.25, 3)
