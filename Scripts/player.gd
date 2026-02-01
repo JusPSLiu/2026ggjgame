@@ -8,7 +8,7 @@ const GRAVITY_MULTIPLIER = 2.0
 @onready var raycasts : Array[Node] = $Detector.get_children()
 @onready var my_pos_x = global_position.x
 
-# Mask equipped: 0 = none, 1 = , 2 = , 3 = 
+# Mask equipped: 0 = none, 1 = fox, 2 = bird, 3 = computer
 var mask = 0
 
 var coyote = 0.1
@@ -71,19 +71,17 @@ func _physics_process(delta: float) -> void:
 	
 	# Handles mask switching.
 	if Input.is_action_just_pressed("mask_1"): # J
-		if mask == 0:
-			# CHANGE THE CURRENT SPRITE FOR THE MASK
-			pass
+		# CHANGE THE CURRENT SPRITE FOR THE MASK
+		SignalBus.setmask.emit(0) # set the UI
 	
 	if Input.is_action_just_pressed("mask_2"): # K
-		if mask == 0:
-			# CHANGE THE CURRENT SPRITE FOR THE MASK
-			pass
+		# CHANGE THE CURRENT SPRITE FOR THE MASK
+		SignalBus.setmask.emit(1) # set the UI
+		pass
 	
 	if Input.is_action_just_pressed("mask_3"): # L
-		if mask == 0:
-			# CHANGE THE CURRENT SPRITE FOR THE MASK
-			pass
+		# CHANGE THE CURRENT SPRITE FOR THE MASK
+		SignalBus.setmask.emit(2) # set the UI
 
 	# slide (and reset position)
 	move_and_slide()
