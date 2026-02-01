@@ -1,17 +1,42 @@
 [gd_scene format=3 uid="uid://etsis7nf34is"]
 
+[ext_resource type="Script" uid="uid://8rpu3oi7c8i4" path="res://Scripts/base_obstacle.gd" id="1_klr0m"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
+size = Vector2(20, 3)
 
-[node name="BaseObstacle" type="StaticBody2D" unique_id=767947608]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c5mf"]
+size = Vector2(10, 20)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=366360781]
+[node name="BaseObstacle" type="Node2D" unique_id=148272063]
+script = ExtResource("1_klr0m")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1091276765]
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.8509804, 0.41960785, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103119326]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.3844768, 0.1767025, 1.2032687e-07, 1)
+
+[node name="TopColliders" type="StaticBody2D" parent="." unique_id=767947608]
+position = Vector2(10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopColliders" unique_id=366360781]
+position = Vector2(0, -8.5)
 shape = SubResource("RectangleShape2D_81xng")
 one_way_collision = true
+one_way_collision_margin = 5.0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1935367245]
-visible = false
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(1, 0, 0, 1)
+[node name="LeftColliders" type="StaticBody2D" parent="." unique_id=1654863702]
+position = Vector2(10, 10)
+collision_layer = 8388608
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftColliders" unique_id=619730459]
+position = Vector2(-5, 0)
+shape = SubResource("RectangleShape2D_7c5mf")
+debug_color = Color(0.7, 0, 0, 0.41960785)

@@ -24,3 +24,19 @@ color = Color(0.101869486, 0.75285375, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="MaskSprite" type="Sprite2D" parent="." unique_id=1957571880]
+
+[node name="Detector" type="Node2D" parent="." unique_id=498666108]
+
+[node name="RayCast2D" type="RayCast2D" parent="Detector" unique_id=1775520374]
+target_position = Vector2(10, 0)
+collision_mask = 8388608
+
+[node name="RayCast2D2" type="RayCast2D" parent="Detector" unique_id=1698490973]
+position = Vector2(0, 13.75)
+target_position = Vector2(10, 0)
+collision_mask = 8388608
+
+[node name="RayCast2D3" type="RayCast2D" parent="Detector" unique_id=2121515986]
+position = Vector2(0, -14.5)
+target_position = Vector2(10, 0)
+collision_mask = 8388608

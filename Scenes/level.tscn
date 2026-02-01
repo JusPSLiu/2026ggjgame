@@ -4,6 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://j43jbjtdv6gi" path="res://Prefabs/Regions/Dirt/dirt_1.tscn" id="2_81xng"]
 [ext_resource type="PackedScene" uid="uid://bce7j5jksxl8h" path="res://Scenes/Overlay/pause_menu.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://Scenes/Things/player.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bxruvlbqqvnbu" path="res://Scenes/Overlay/transition.tscn" id="4_wqkje"]
+[ext_resource type="Shader" uid="uid://bjskohy4loxwq" path="res://Scripts/shaders/pixelator.gdshader" id="7_8c0lf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_754fn"]
+shader = ExtResource("7_8c0lf")
+shader_parameter/offset = 0.999999977648
+shader_parameter/pixel_size = 4
+shader_parameter/screen_size = Vector2(640, 360)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51e2h"]
 size = Vector2(160, 20)
@@ -11,10 +19,42 @@ size = Vector2(160, 20)
 [node name="level" type="Node2D" unique_id=1462267929]
 scale = Vector2(4, 4)
 
+[node name="Shaders" type="Control" parent="." unique_id=179588175]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackPixelator" type="ColorRect" parent="Shaders" unique_id=421898078]
+z_index = -2
+material = SubResource("ShaderMaterial_754fn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Shaders" unique_id=1174184952]
+visible = false
+
+[node name="CRT" type="ColorRect" parent="Shaders/CanvasLayer" unique_id=568129605]
+z_index = 10
+material = SubResource("ShaderMaterial_754fn")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CollisionBorder" type="StaticBody2D" parent="." unique_id=1262617687]
 
 [node name="floor" type="CollisionShape2D" parent="CollisionBorder" unique_id=1792834000]
-position = Vector2(80, 90)
+position = Vector2(80, 96)
 shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="ceiliing" type="CollisionShape2D" parent="CollisionBorder" unique_id=1801620547]
@@ -27,7 +67,11 @@ DirtRegions = Array[Resource]([ExtResource("2_81xng")])
 
 [node name="PauseMenu" parent="." unique_id=1851503900 instance=ExtResource("2_k5f4k")]
 
+[node name="HUD" type="CanvasLayer" parent="." unique_id=121377684]
+
+[node name="Transition" parent="HUD" unique_id=116715743 instance=ExtResource("4_wqkje")]
+visible = false
+
 [node name="Player" parent="." unique_id=1281925854 instance=ExtResource("3_6phgx")]
-position = Vector2(12, 64)
+position = Vector2(32, 70)
 scale = Vector2(1, 1)
-speed = 100.0

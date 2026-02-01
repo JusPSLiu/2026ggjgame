@@ -14,6 +14,10 @@ config/name="New Game Project"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://b8wr0hwoqop4v"
+
 [autoload]
 
 SignalBus="*uid://b5nklvgc306b2"
@@ -76,3 +80,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

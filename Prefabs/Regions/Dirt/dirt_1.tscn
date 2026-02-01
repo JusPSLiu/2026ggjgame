@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_e675m"]
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_yqdep"]
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="3_e675m"]
 
 [node name="BaseRegion" unique_id=1860413097 instance=ExtResource("1_e675m")]
 length = 32
@@ -104,3 +105,13 @@ position = Vector2(960, 0)
 
 [node name="BackgroundUnit32" parent="Background" parent_id_path=PackedInt32Array(821254973) index="31" unique_id=1992984208 instance=ExtResource("2_yqdep")]
 position = Vector2(992, 0)
+
+[node name="BaseObstacle" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("3_e675m")]
+position = Vector2(140, 66)
+
+[node name="BaseObstacle2" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="1" unique_id=896785984 instance=ExtResource("3_e675m")]
+position = Vector2(240, 66)
+
+[node name="BaseObstacle3" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="2" unique_id=624207005 instance=ExtResource("3_e675m")]
+z_index = -1
+position = Vector2(320, 2)

@@ -18,4 +18,5 @@ func _process(delta: float) -> void:
 		var newkid = DirtRegions[0].instantiate()
 		newkid.offset = 160
 		loadedAhead += (newkid.length)*32
+		newkid.hide()
 		add_child(newkid)

@@ -23,3 +23,5 @@ text = "Region Length: 1"
 [node name="Background" type="Node2D" parent="." unique_id=821254973]
 
 [node name="BackgroundUnit" parent="Background" unique_id=1076090912 instance=ExtResource("3_q0udu")]
+
+[node name="Obstacles" type="Node2D" parent="." unique_id=854876372]
