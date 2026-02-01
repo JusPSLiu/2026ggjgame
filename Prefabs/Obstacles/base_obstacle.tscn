@@ -11,18 +11,6 @@ size = Vector2(10, 20)
 [node name="BaseObstacle" type="Node2D" unique_id=148272063]
 script = ExtResource("1_klr0m")
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1091276765]
-offset_right = 20.0
-offset_bottom = 20.0
-color = Color(0.8509804, 0.41960785, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2103119326]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 20.0
-offset_bottom = 20.0
-color = Color(0.3844768, 0.1767025, 1.2032687e-07, 1)
-
 [node name="TopColliders" type="StaticBody2D" parent="." unique_id=767947608]
 position = Vector2(10, 10)
 

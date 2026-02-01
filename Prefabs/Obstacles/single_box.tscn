@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bavf52o0icic0"]
+
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="1_8y4go"]
+[ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="2_jub24"]
+
+[node name="BaseObstacle" unique_id=148272063 instance=ExtResource("1_8y4go")]
+
+[node name="ColorRect2" type="Sprite2D" parent="." index="2" unique_id=1667890641]
+position = Vector2(8, 6)
+texture = ExtResource("2_jub24")
