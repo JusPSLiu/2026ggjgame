@@ -9,6 +9,7 @@ var busVol = 0
 func _ready() -> void:
 	show()
 	SignalBus.fade_to_level.connect(fadeToScene)
+	get_tree().paused = false
 
 # fade to scene
 func fadeToScene(scene : String):

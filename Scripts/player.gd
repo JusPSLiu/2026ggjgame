@@ -13,6 +13,7 @@ var mask = 0
 
 var coyote = 0.1
 var speed = 0
+var dead : bool = false
 
 func _ready():
 	GlobalVariables.deathpos = -60
@@ -20,6 +21,12 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
+	# DEATH WALL speed
+	GlobalVariables.deathpos += delta*DEATH_SPEED
+	
+	# skip if dead
+	if (dead): return
+	
 	# Add the gravity.
 	if not is_on_floor() or coyote > 0:
 		coyote -= delta
@@ -43,8 +50,10 @@ func _physics_process(delta: float) -> void:
 	else: speed = lerpf(speed, MAX_SPEED, delta*4.0)
 	GlobalVariables.xpos += delta * speed
 	
-	# DEATH WALL speed
-	GlobalVariables.deathpos += delta*DEATH_SPEED
+	# handle DEATH
+	if (GlobalVariables.deathpos > GlobalVariables.xpos-20):
+		SignalBus.died.emit()
+		dead = true
 
 	# Handles jump.
 	if Input.is_action_pressed("ui_up") and coyote > 0:
