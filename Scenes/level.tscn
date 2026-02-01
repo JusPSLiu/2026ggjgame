@@ -81,13 +81,12 @@ position = Vector2(80, 95.875)
 shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="ceiliing" type="CollisionShape2D" parent="CollisionBorder" unique_id=1801620547]
-position = Vector2(80, -5.5)
+position = Vector2(80, -17)
 shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
 script = ExtResource("1_tumq0")
 DirtRegions = Array[Resource]([ExtResource("2_81xng"), ExtResource("5_oqgf2"), ExtResource("6_2klc5"), ExtResource("7_nngtn")])
-debugEnabled = true
 debugTestONLY = 3
 
 [node name="PauseMenu" parent="." unique_id=1851503900 instance=ExtResource("2_k5f4k")]
@@ -109,6 +108,15 @@ offset_right = 1280.0
 offset_bottom = 720.0
 scale = Vector2(0.5, 0.5)
 script = ExtResource("7_qxfql")
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Died" unique_id=1831845786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.39, 0.195, 0, 0.74509805)
 
 [node name="Label" type="Label" parent="HUD/Died" unique_id=1162716405]
 layout_mode = 0

@@ -4,7 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_0s4xd"]
 [ext_resource type="PackedScene" uid="uid://bavf52o0icic0" path="res://Prefabs/Obstacles/single_box.tscn" id="4_0s4xd"]
 [ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="5_8jcny"]
+[ext_resource type="Texture2D" uid="uid://5txarrawww3n" path="res://Art/Obstacles/box2.png" id="5_wwxtk"]
 [ext_resource type="PackedScene" uid="uid://d0bmxv6xgx70o" path="res://Scenes/Things/coin.tscn" id="6_wwxtk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e56bg"]
+size = Vector2(139.25, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g53an"]
+size = Vector2(103, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jcny"]
+size = Vector2(15.25, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwxtk"]
+size = Vector2(9.25, 24.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuda7"]
+size = Vector2(9, 51.25)
 
 [node name="Dirt3" unique_id=1860413097 instance=ExtResource("1_41tk4")]
 length = 16
@@ -61,108 +77,233 @@ position = Vector2(448, 0)
 position = Vector2(480, 0)
 
 [node name="BaseObstacle" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("4_0s4xd")]
-position = Vector2(137.75, 72.25)
+position = Vector2(137, 74)
 
-[node name="BaseObstacle2" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="1" unique_id=1108099178 instance=ExtResource("4_0s4xd")]
-position = Vector2(153.75, 72.5)
+[node name="CollisionShape2D" parent="Obstacles/BaseObstacle/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="0" unique_id=366360781]
+position = Vector2(0.75, 28.25)
 
-[node name="BaseObstacle3" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="2" unique_id=89506324 instance=ExtResource("4_0s4xd")]
-position = Vector2(169.75, 72.75)
+[node name="lowcollider" type="CollisionShape2D" parent="Obstacles/BaseObstacle/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="1" unique_id=799006490]
+position = Vector2(59.625, -8.5)
+shape = SubResource("RectangleShape2D_e56bg")
+one_way_collision = true
+one_way_collision_margin = 5.0
 
-[node name="BaseObstacle4" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="3" unique_id=474726570 instance=ExtResource("4_0s4xd")]
-position = Vector2(185.75, 73)
+[node name="midcollider" type="CollisionShape2D" parent="Obstacles/BaseObstacle/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="2" unique_id=979705787]
+position = Vector2(171.5, -33)
+shape = SubResource("RectangleShape2D_g53an")
+one_way_collision = true
+one_way_collision_margin = 5.0
 
-[node name="BaseObstacle5" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="4" unique_id=157423266 instance=ExtResource("4_0s4xd")]
-position = Vector2(202, 73.5)
+[node name="outcollider" type="CollisionShape2D" parent="Obstacles/BaseObstacle/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="3" unique_id=792239347]
+position = Vector2(300.875, -57)
+shape = SubResource("RectangleShape2D_8jcny")
+one_way_collision = true
+one_way_collision_margin = 5.0
 
-[node name="BaseObstacle6" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="5" unique_id=113999237 instance=ExtResource("4_0s4xd")]
-position = Vector2(218, 73.75)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/BaseObstacle/LeftColliders" parent_id_path=PackedInt32Array(148272063, 1654863702) index="1" unique_id=858087380]
+position = Vector2(124.625, -21.125)
+shape = SubResource("RectangleShape2D_wwxtk")
+debug_color = Color(0.7, 0, 0, 0.41960785)
 
-[node name="BaseObstacle7" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="6" unique_id=1857140516 instance=ExtResource("4_0s4xd")]
-position = Vector2(234, 74)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacles/BaseObstacle/LeftColliders" parent_id_path=PackedInt32Array(148272063, 1654863702) index="2" unique_id=612743672]
+position = Vector2(298, -46.1875)
+shape = SubResource("RectangleShape2D_wwxtk")
+debug_color = Color(0.7, 0, 0, 0.41960785)
 
-[node name="BaseObstacle8" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="7" unique_id=984145605 instance=ExtResource("4_0s4xd")]
-position = Vector2(250, 74.25)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/BaseObstacle/LeftColliders" parent_id_path=PackedInt32Array(148272063, 1654863702) index="3" unique_id=307177231]
+position = Vector2(190.25, -78.875)
+shape = SubResource("RectangleShape2D_fuda7")
+debug_color = Color(0.7, 0, 0, 0.41960785)
 
-[node name="BaseObstacle9" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="8" unique_id=122063013 instance=ExtResource("4_0s4xd")]
-position = Vector2(264.75, 73.75)
+[node name="ColorRect2" parent="Obstacles/BaseObstacle" index="2" unique_id=1667890641]
+metadata/_edit_lock_ = true
 
-[node name="BaseObstacle10" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="9" unique_id=354426078 instance=ExtResource("4_0s4xd")]
-position = Vector2(280.75, 74)
+[node name="bottomlayer" type="Node2D" parent="Obstacles/BaseObstacle/ColorRect2" index="0" unique_id=603856693]
 
-[node name="BaseObstacle11" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="10" unique_id=919900165 instance=ExtResource("4_0s4xd")]
-position = Vector2(296.75, 74.25)
-
-[node name="BaseObstacle12" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="11" unique_id=245553008 instance=ExtResource("4_0s4xd")]
-position = Vector2(312.75, 74.5)
-
-[node name="BaseObstacle13" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="12" unique_id=363069918 instance=ExtResource("4_0s4xd")]
-position = Vector2(264.5, 61)
-
-[node name="BaseObstacle14" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="13" unique_id=1572018348 instance=ExtResource("4_0s4xd")]
-position = Vector2(280.5, 61.25)
-
-[node name="BaseObstacle15" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="14" unique_id=863410627 instance=ExtResource("4_0s4xd")]
-position = Vector2(296.5, 61.5)
-
-[node name="BaseObstacle16" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="15" unique_id=1949773225 instance=ExtResource("4_0s4xd")]
-position = Vector2(312.5, 61.75)
-
-[node name="BaseObstacle17" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="16" unique_id=1031840899 instance=ExtResource("4_0s4xd")]
-position = Vector2(328.75, 74.75)
-
-[node name="BaseObstacle18" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="17" unique_id=1902718286 instance=ExtResource("4_0s4xd")]
-position = Vector2(344.75, 75)
-
-[node name="BaseObstacle19" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="18" unique_id=952931509 instance=ExtResource("4_0s4xd")]
-position = Vector2(360.75, 75.25)
-
-[node name="BaseObstacle20" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="19" unique_id=2062178496 instance=ExtResource("4_0s4xd")]
-position = Vector2(376.75, 75.5)
-
-[node name="BaseObstacle21" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="20" unique_id=1479426340 instance=ExtResource("4_0s4xd")]
-position = Vector2(328.5, 62)
-
-[node name="BaseObstacle22" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="21" unique_id=893285626 instance=ExtResource("4_0s4xd")]
-position = Vector2(344.5, 62.25)
-
-[node name="BaseObstacle23" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="22" unique_id=967205242 instance=ExtResource("4_0s4xd")]
-position = Vector2(360.5, 62.5)
-
-[node name="BaseObstacle24" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="23" unique_id=405743225 instance=ExtResource("4_0s4xd")]
-position = Vector2(376.5, 62.75)
-
-[node name="BaseObstacle25" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="24" unique_id=1265452899 instance=ExtResource("4_0s4xd")]
-position = Vector2(328.5, 48.5)
-
-[node name="BaseObstacle26" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="25" unique_id=940326999 instance=ExtResource("4_0s4xd")]
-position = Vector2(344.5, 48.75)
-
-[node name="BaseObstacle27" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="26" unique_id=1688835938 instance=ExtResource("4_0s4xd")]
-position = Vector2(360.5, 49)
-
-[node name="BaseObstacle28" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="27" unique_id=571602983 instance=ExtResource("4_0s4xd")]
-position = Vector2(376.5, 49.25)
-
-[node name="BaseObstacle29" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="28" unique_id=682156477 instance=ExtResource("4_0s4xd")]
-position = Vector2(440.5, 25.5)
-
-[node name="Box" type="Sprite2D" parent="Obstacles/BaseObstacle29" index="2" unique_id=1666938556]
-position = Vector2(8, 18)
+[node name="ColorRect3" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="0" unique_id=251381152]
+z_index = -1
+position = Vector2(14, 0)
 texture = ExtResource("5_8jcny")
 
-[node name="Coin" parent="Obstacles/BaseObstacle29" index="4" unique_id=1249391020 instance=ExtResource("6_wwxtk")]
-position = Vector2(-35, 48.5)
+[node name="ColorRect4" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="1" unique_id=992498639]
+z_index = -1
+position = Vector2(30.5, 0.5)
+texture = ExtResource("5_wwxtk")
 
-[node name="BaseObstacle30" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="29" unique_id=589798782 instance=ExtResource("4_0s4xd")]
-position = Vector2(345, 7.75)
-
-[node name="Box" type="Sprite2D" parent="Obstacles/BaseObstacle30" index="2" unique_id=1312912945]
-position = Vector2(8, 18)
+[node name="ColorRect5" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="2" unique_id=973668887]
+position = Vector2(47, 0)
 texture = ExtResource("5_8jcny")
 
-[node name="Coin" parent="Obstacles/BaseObstacle30" index="4" unique_id=1320825768 instance=ExtResource("6_wwxtk")]
-position = Vector2(25, 13.75)
+[node name="ColorRect6" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="3" unique_id=990793245]
+z_index = -1
+position = Vector2(59, 0)
+texture = ExtResource("5_8jcny")
 
-[editable path="Obstacles/BaseObstacle29"]
-[editable path="Obstacles/BaseObstacle30"]
+[node name="ColorRect7" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="4" unique_id=1203779367]
+z_index = -1
+position = Vector2(74.25, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect8" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="5" unique_id=1165500185]
+z_index = -1
+position = Vector2(89.75, 0.5)
+texture = ExtResource("5_wwxtk")
+
+[node name="ColorRect9" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="6" unique_id=1849617170]
+z_index = -1
+position = Vector2(106.25, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect11" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="7" unique_id=1239349523]
+z_index = -1
+position = Vector2(134.25, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect10" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="8" unique_id=2143608331]
+z_index = -1
+position = Vector2(122.25, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect18" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="9" unique_id=902158398]
+z_index = -1
+position = Vector2(214, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect19" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="10" unique_id=1458951949]
+z_index = -1
+position = Vector2(201, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect20" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="11" unique_id=1150246883]
+z_index = -1
+position = Vector2(189, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect21" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="12" unique_id=760188767]
+z_index = -1
+position = Vector2(176, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect22" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="13" unique_id=544839970]
+z_index = -1
+position = Vector2(163, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect23" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/bottomlayer" index="14" unique_id=1990755347]
+z_index = -1
+position = Vector2(151, 0)
+texture = ExtResource("5_8jcny")
+
+[node name="midlayer" type="Node2D" parent="Obstacles/BaseObstacle/ColorRect2" index="1" unique_id=133433165]
+
+[node name="ColorRect12" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="0" unique_id=2007644714]
+z_index = -1
+position = Vector2(213.25, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect24" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="1" unique_id=1455919042]
+z_index = -1
+position = Vector2(200.25, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect25" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="2" unique_id=2139063107]
+z_index = -1
+position = Vector2(186.25, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect26" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="3" unique_id=1475333172]
+z_index = -1
+position = Vector2(172.25, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect27" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="4" unique_id=98963362]
+z_index = -1
+position = Vector2(160.25, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect28" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="5" unique_id=1509699704]
+z_index = -1
+position = Vector2(144.5, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect29" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/midlayer" index="6" unique_id=1003690880]
+z_index = -1
+position = Vector2(130, -12)
+texture = ExtResource("5_8jcny")
+
+[node name="toplevel" type="Node2D" parent="Obstacles/BaseObstacle/ColorRect2" index="2" unique_id=1518091630]
+
+[node name="ColorRect13" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="0" unique_id=651277767]
+z_index = -1
+position = Vector2(142, -24)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect19" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="1" unique_id=1411745561]
+z_index = -1
+position = Vector2(129, -24)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect14" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="2" unique_id=1893599012]
+z_index = -1
+position = Vector2(157, -24)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect15" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="3" unique_id=115953565]
+z_index = -1
+position = Vector2(173.5, -24)
+texture = ExtResource("5_wwxtk")
+
+[node name="ColorRect16" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="4" unique_id=820885944]
+z_index = -1
+position = Vector2(190.5, -24)
+texture = ExtResource("5_wwxtk")
+
+[node name="ColorRect18" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="5" unique_id=1529100174]
+z_index = -1
+position = Vector2(221, -24)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect17" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/toplevel" index="6" unique_id=1315812109]
+z_index = -1
+position = Vector2(208, -24)
+texture = ExtResource("5_8jcny")
+
+[node name="blocky" type="Node2D" parent="Obstacles/BaseObstacle/ColorRect2" index="3" unique_id=2004381325]
+
+[node name="ColorRect19" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/blocky" index="0" unique_id=811275851]
+z_index = -1
+position = Vector2(195.75, -54.25)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect20" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/blocky" index="1" unique_id=232554534]
+z_index = -1
+position = Vector2(195.75, -66.25)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect21" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/blocky" index="2" unique_id=436625555]
+z_index = -1
+position = Vector2(195.75, -78.25)
+texture = ExtResource("5_8jcny")
+
+[node name="ColorRect22" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/blocky" index="3" unique_id=1680724709]
+z_index = -1
+position = Vector2(195.75, -90.25)
+texture = ExtResource("5_8jcny")
+
+[node name="outblock" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2" index="4" unique_id=1598575165]
+z_index = -1
+position = Vector2(303, -48)
+texture = ExtResource("5_8jcny")
+
+[node name="outblock2" type="Sprite2D" parent="Obstacles/BaseObstacle/ColorRect2/outblock" index="0" unique_id=1513992270]
+z_index = -1
+position = Vector2(0, 12)
+texture = ExtResource("5_8jcny")
+
+[node name="Coin" parent="Obstacles/BaseObstacle" index="3" unique_id=1249391020 instance=ExtResource("6_wwxtk")]
+position = Vector2(268.5, 0)
+
+[node name="Coin2" parent="Obstacles/BaseObstacle" index="4" unique_id=1320825768 instance=ExtResource("6_wwxtk")]
+position = Vector2(233, -52.5)
+
+[editable path="Obstacles/BaseObstacle"]

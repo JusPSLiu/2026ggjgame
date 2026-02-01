@@ -1,10 +1,132 @@
 [gd_scene format=3 uid="uid://ccfhqh8b837fa"]
 
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://Scripts/player.gd" id="1_cf2ej"]
-[ext_resource type="Texture2D" uid="uid://dpmmfx4caydk0" path="res://Art/Spritesheets/player.png" id="2_nyesc"]
+[ext_resource type="Texture2D" uid="uid://c0528k7o4nkwd" path="res://Art/Spritesheets/player_run.png" id="2_nyesc"]
+[ext_resource type="Texture2D" uid="uid://cpftiqt1vti0h" path="res://Art/Spritesheets/mask_fox.png" id="3_b2owl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0bb2n"]
 height = 32.0
+
+[sub_resource type="Animation" id="Animation_b2owl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 36, 44)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MaskSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3.5)]
+}
+
+[sub_resource type="Animation" id="Animation_yjyal"]
+resource_name = "fall"
+length = 0.6667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Rect2(396, 0, 36, 44)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MaskSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, -6.5)]
+}
+
+[sub_resource type="Animation" id="Animation_pxj2o"]
+resource_name = "run"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666666, 0.13333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Rect2(288, 0, 36, 44), Rect2(324, 0, 36, 44), Rect2(360, 0, 36, 44)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MaskSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666666, 0.13333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -3.5), Vector2(0, -5.5), Vector2(0, -7.5)]
+}
+
+[sub_resource type="Animation" id="Animation_uyw24"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(0, 0, 36, 44), Rect2(36, 0, 36, 44), Rect2(72, 0, 36, 44), Rect2(108, 0, 36, 44), Rect2(144, 0, 36, 44), Rect2(180, 0, 36, 44), Rect2(216, 0, 36, 44), Rect2(252, 0, 36, 44), Rect2(288, 0, 36, 44), Rect2(324, 0, 36, 44), Rect2(360, 0, 36, 44), Rect2(396, 0, 36, 44)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MaskSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -3.5), Vector2(0, -1.5), Vector2(0, -3.5), Vector2(0, -5.5), Vector2(0, -6.5), Vector2(0, -3.5), Vector2(0, -1.5), Vector2(0, -3.5), Vector2(0, -5.5), Vector2(0, -7.5), Vector2(0, -6.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxj2o"]
+_data = {
+&"RESET": SubResource("Animation_b2owl"),
+&"fall": SubResource("Animation_yjyal"),
+&"jump": SubResource("Animation_pxj2o"),
+&"run": SubResource("Animation_uyw24")
+}
 
 [node name="Player" type="CharacterBody2D" unique_id=1281925854 groups=["player"]]
 scale = Vector2(4, 4)
@@ -17,8 +139,16 @@ shape = SubResource("CapsuleShape2D_0bb2n")
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1470809466]
 position = Vector2(0, -3.5)
 texture = ExtResource("2_nyesc")
+region_enabled = true
+region_rect = Rect2(0, 0, 36, 44)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=310402115]
+libraries/ = SubResource("AnimationLibrary_pxj2o")
+autoplay = &"run"
 
 [node name="MaskSprite" type="Sprite2D" parent="." unique_id=1957571880]
+position = Vector2(0, -3.5)
+texture = ExtResource("3_b2owl")
 
 [node name="Detector" type="Node2D" parent="." unique_id=498666108]
 

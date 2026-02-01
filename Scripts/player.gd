@@ -7,6 +7,7 @@ const GRAVITY_MULTIPLIER = 2.0
 
 @onready var raycasts : Array[Node] = $Detector.get_children()
 @onready var my_pos_x = global_position.x
+@onready var animator : AnimationPlayer = $PlayerSprite/AnimationPlayer
 
 # Mask equipped: 0 = none, 1 = fox, 2 = bird, 3 = computer
 var mask = 0
@@ -28,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	if (dead): return
 	
 	# Add the gravity.
-	if not is_on_floor() or coyote > 0:
+	if not is_on_floor():
 		coyote -= delta
 		var fallRate = 2
 		if (velocity.y < 0):
@@ -41,8 +42,14 @@ func _physics_process(delta: float) -> void:
 				fallRate = 1.0
 			else: fallRate = 2.0
 		velocity += get_gravity() * delta * GRAVITY_MULTIPLIER * fallRate
+		# in air, play fall anim
+		if (velocity.y > 0 and (!animator.is_playing() or animator.current_animation == "run")):
+			animator.play("fall")
 	else:
 		coyote = 0.1
+		# on ground, play run anim
+		if (animator.current_animation != "run"):
+			animator.play("run")
 	
 	# handle speed
 	# running in game, check if hit if not speed up to max speed
@@ -59,6 +66,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_up") and coyote > 0:
 		velocity.y = JUMP_VELOCITY
 		coyote = 0
+		animator.play("jump")
 	
 	# Handles crouch.
 	if Input.is_action_just_pressed("ui_down"):

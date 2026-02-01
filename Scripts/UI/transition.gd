@@ -13,6 +13,7 @@ func _ready() -> void:
 
 # fade to scene
 func fadeToScene(scene : String):
+	if (transitionPlayer.is_playing()): return
 	if (scene.is_empty() or !ResourceLoader.exists(scene)):
 		print("ERROR, scene not found")
 		return

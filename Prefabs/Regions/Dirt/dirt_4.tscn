@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_e3n4f"]
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_hmffr"]
-[ext_resource type="Script" uid="uid://djd78l4f65muj" path="res://Scripts/regions/background_unit.gd" id="3_b6sm7"]
 [ext_resource type="Texture2D" uid="uid://boiqb5y7lvyrp" path="res://Art/Obstacles/building/one_story.png" id="4_bewip"]
 [ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="5_558lv"]
 [ext_resource type="PackedScene" uid="uid://bavf52o0icic0" path="res://Prefabs/Obstacles/single_box.tscn" id="6_7aq7f"]
@@ -23,81 +22,62 @@ region_length = 20
 [node name="Label" parent="ObstacleScaler" index="0" unique_id=177015975]
 text = "Region Length: 20"
 
-[node name="BackgroundUnit2" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit2" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_hmffr")]
 position = Vector2(32, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit3" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=662666234 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit3" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=662666234 instance=ExtResource("2_hmffr")]
 position = Vector2(64, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit4" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=518301250 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit4" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=518301250 instance=ExtResource("2_hmffr")]
 position = Vector2(96, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit5" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=823381616 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit5" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=823381616 instance=ExtResource("2_hmffr")]
 position = Vector2(128, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit6" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=1296189089 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit6" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=1296189089 instance=ExtResource("2_hmffr")]
 position = Vector2(160, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit7" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=1009935269 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit7" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=1009935269 instance=ExtResource("2_hmffr")]
 position = Vector2(192, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit8" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=1168803129 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit8" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=1168803129 instance=ExtResource("2_hmffr")]
 position = Vector2(224, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit9" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=1847656231 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit9" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=1847656231 instance=ExtResource("2_hmffr")]
 position = Vector2(256, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit10" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=732364556 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit10" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=732364556 instance=ExtResource("2_hmffr")]
 position = Vector2(288, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit11" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=837232398 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit11" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=837232398 instance=ExtResource("2_hmffr")]
 position = Vector2(320, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit12" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=478015977 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit12" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=478015977 instance=ExtResource("2_hmffr")]
 position = Vector2(352, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit13" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="12" unique_id=1348733376 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit13" parent="Background" parent_id_path=PackedInt32Array(821254973) index="12" unique_id=1348733376 instance=ExtResource("2_hmffr")]
 position = Vector2(384, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit14" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="13" unique_id=593658418 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit14" parent="Background" parent_id_path=PackedInt32Array(821254973) index="13" unique_id=593658418 instance=ExtResource("2_hmffr")]
 position = Vector2(416, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit15" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="14" unique_id=2069511312 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit15" parent="Background" parent_id_path=PackedInt32Array(821254973) index="14" unique_id=2069511312 instance=ExtResource("2_hmffr")]
 position = Vector2(448, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit16" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="15" unique_id=635892213 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit16" parent="Background" parent_id_path=PackedInt32Array(821254973) index="15" unique_id=635892213 instance=ExtResource("2_hmffr")]
 position = Vector2(480, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit17" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="16" unique_id=48780599 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit17" parent="Background" parent_id_path=PackedInt32Array(821254973) index="16" unique_id=48780599 instance=ExtResource("2_hmffr")]
 position = Vector2(512, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit18" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="17" unique_id=464107941 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit18" parent="Background" parent_id_path=PackedInt32Array(821254973) index="17" unique_id=464107941 instance=ExtResource("2_hmffr")]
 position = Vector2(544, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit19" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="18" unique_id=534533008 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit19" parent="Background" parent_id_path=PackedInt32Array(821254973) index="18" unique_id=534533008 instance=ExtResource("2_hmffr")]
 position = Vector2(576, 0)
-script = ExtResource("3_b6sm7")
 
-[node name="BackgroundUnit20" type="Node2D" parent="Background" parent_id_path=PackedInt32Array(821254973) index="19" unique_id=1994609420 instance=ExtResource("2_hmffr")]
+[node name="BackgroundUnit20" parent="Background" parent_id_path=PackedInt32Array(821254973) index="19" unique_id=1994609420 instance=ExtResource("2_hmffr")]
 position = Vector2(608, 0)
-script = ExtResource("3_b6sm7")
 
 [node name="BaseObstacle7" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 instance=ExtResource("5_558lv")]
 position = Vector2(216.25, 99)
@@ -261,13 +241,13 @@ position = Vector2(7.25, -30.75)
 position = Vector2(57, -29.75)
 
 [node name="Coin4" parent="Obstacles/BaseObstacle11" index="6" unique_id=304589766 instance=ExtResource("9_b6sm7")]
-position = Vector2(135, -36.5)
+position = Vector2(135, -44)
 
 [node name="Coin5" parent="Obstacles/BaseObstacle11" index="7" unique_id=890625675 instance=ExtResource("9_b6sm7")]
-position = Vector2(34.75, -48.25)
+position = Vector2(35.75, -62.25)
 
 [node name="Coin6" parent="Obstacles/BaseObstacle11" index="8" unique_id=72590195 instance=ExtResource("9_b6sm7")]
-position = Vector2(-20, -49)
+position = Vector2(-19, -63)
 
 [editable path="Obstacles/BaseObstacle7"]
 [editable path="Obstacles/BaseObstacle8"]
