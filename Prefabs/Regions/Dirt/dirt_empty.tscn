@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bi6mc0a1v4dt"]
+
+[ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_k2ebg"]
+[ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_e2p0u"]
+
+[node name="BaseRegion" unique_id=1860413097 instance=ExtResource("1_k2ebg")]
+length = 12
+
+[node name="ObstacleScaler" parent="." index="0" unique_id=550516647]
+region_length = 12
+
+[node name="Label" parent="ObstacleScaler" index="0" unique_id=177015975]
+text = "Region Length: 12"
+
+[node name="BackgroundUnit2" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_e2p0u")]
+position = Vector2(32, 0)
+
+[node name="BackgroundUnit3" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=349447027 instance=ExtResource("2_e2p0u")]
+position = Vector2(64, 0)
+
+[node name="BackgroundUnit4" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=697770708 instance=ExtResource("2_e2p0u")]
+position = Vector2(96, 0)
+
+[node name="BackgroundUnit5" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=1724652698 instance=ExtResource("2_e2p0u")]
+position = Vector2(128, 0)
+
+[node name="BackgroundUnit6" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=335234355 instance=ExtResource("2_e2p0u")]
+position = Vector2(160, 0)
+
+[node name="BackgroundUnit7" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=1952097014 instance=ExtResource("2_e2p0u")]
+position = Vector2(192, 0)
+
+[node name="BackgroundUnit8" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=738648803 instance=ExtResource("2_e2p0u")]
+position = Vector2(224, 0)
+
+[node name="BackgroundUnit9" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=90139569 instance=ExtResource("2_e2p0u")]
+position = Vector2(256, 0)
+
+[node name="BackgroundUnit10" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=538956213 instance=ExtResource("2_e2p0u")]
+position = Vector2(288, 0)
+
+[node name="BackgroundUnit11" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=138251905 instance=ExtResource("2_e2p0u")]
+position = Vector2(320, 0)
+
+[node name="BackgroundUnit12" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=1507240929 instance=ExtResource("2_e2p0u")]
+position = Vector2(352, 0)

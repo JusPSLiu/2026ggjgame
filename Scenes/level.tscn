@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://j43jbjtdv6gi" path="res://Prefabs/Regions/Dirt/dirt_1.tscn" id="2_81xng"]
 [ext_resource type="PackedScene" uid="uid://bce7j5jksxl8h" path="res://Scenes/Overlay/pause_menu.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://Scenes/Things/player.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://bi6mc0a1v4dt" path="res://Prefabs/Regions/Dirt/dirt_empty.tscn" id="4_0cmrb"]
 [ext_resource type="PackedScene" uid="uid://bxruvlbqqvnbu" path="res://Scenes/Overlay/transition.tscn" id="4_wqkje"]
 [ext_resource type="PackedScene" uid="uid://dcmu78ya3xhdb" path="res://Prefabs/Regions/Dirt/dirt_2.tscn" id="5_oqgf2"]
 [ext_resource type="PackedScene" uid="uid://6r8jg1qgejjn" path="res://Prefabs/Regions/Dirt/dirt_3.tscn" id="6_2klc5"]
@@ -16,9 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://cfwawvy0vcq87" path="res://Prefabs/Regions/Dirt/dirt_5.tscn" id="9_00k4y"]
 [ext_resource type="Script" uid="uid://c4042imblo0s" path="res://Scripts/objects/coin_sfx.gd" id="9_bvt00"]
 [ext_resource type="Script" uid="uid://dyhnoex3xnbca" path="res://Scripts/UI/masks.gd" id="9_ha31o"]
+[ext_resource type="PackedScene" uid="uid://d02m4v7o2u2u6" path="res://Prefabs/Regions/Dirt/dirt_TRANSITION.tscn" id="10_3a44l"]
 [ext_resource type="Texture2D" uid="uid://dsxeykd8saa67" path="res://Art/UI/masks/fox.png" id="10_pa6b8"]
 [ext_resource type="Texture2D" uid="uid://co5652vl3acap" path="res://Art/UI/masks/bird.png" id="11_c7le1"]
 [ext_resource type="Texture2D" uid="uid://kuxxr1ypcoph" path="res://Art/UI/masks/computer.png" id="12_2klc5"]
+[ext_resource type="PackedScene" uid="uid://x162gttffp4t" path="res://Prefabs/Regions/Dirt/dirt_TRANSROBO.tscn" id="12_pnhnk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_754fn"]
 shader = ExtResource("7_8c0lf")
@@ -88,8 +91,8 @@ shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
 script = ExtResource("1_tumq0")
-DirtRegions = Array[Resource]([ExtResource("2_81xng"), ExtResource("5_oqgf2"), ExtResource("6_2klc5"), ExtResource("7_nngtn"), ExtResource("8_vofx3"), ExtResource("9_00k4y")])
-debugEnabled = true
+StartRegion = ExtResource("4_0cmrb")
+DirtRegions = Array[Resource]([ExtResource("2_81xng"), ExtResource("5_oqgf2"), ExtResource("6_2klc5"), ExtResource("7_nngtn"), ExtResource("8_vofx3"), ExtResource("9_00k4y"), ExtResource("10_3a44l"), ExtResource("12_pnhnk"), ExtResource("12_pnhnk")])
 debugTestONLY = 6
 
 [node name="PauseMenu" parent="." unique_id=1851503900 instance=ExtResource("2_k5f4k")]
@@ -158,12 +161,13 @@ text = "Exit to Main Menu"
 visible = false
 
 [node name="Masks" type="Control" parent="HUD" unique_id=1582057945]
+modulate = Color(1, 1, 1, 0.64705884)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 412.0
-offset_top = 291.0
-offset_right = 452.0
-offset_bottom = 331.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 39.0
 scale = Vector2(4, 4)
 script = ExtResource("9_ha31o")
 

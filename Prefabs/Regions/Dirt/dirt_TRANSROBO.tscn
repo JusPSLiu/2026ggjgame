@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://x162gttffp4t"]
+
+[ext_resource type="PackedScene" uid="uid://bl32ika5sftry" path="res://Prefabs/Regions/base_region.tscn" id="1_4w763"]
+[ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_mln74"]
+[ext_resource type="Texture2D" uid="uid://c6qmg73m0vdvv" path="res://Art/Obstacles/GATE/robot_only.png" id="3_4w763"]
+[ext_resource type="PackedScene" uid="uid://etsis7nf34is" path="res://Prefabs/Obstacles/base_obstacle.tscn" id="4_cib8m"]
+[ext_resource type="Texture2D" uid="uid://bhtef68dklds1" path="res://Art/Obstacles/GATE/gate_open.png" id="5_c6vtb"]
+[ext_resource type="Texture2D" uid="uid://c256juvi7ud82" path="res://Art/Obstacles/GATE/gate_R.png" id="6_gittm"]
+[ext_resource type="Texture2D" uid="uid://6t3cl2gs45f1" path="res://Art/Obstacles/GATE/gate_closed.png" id="7_s6407"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q832a"]
+size = Vector2(20, 96.5)
+
+[node name="BaseRegion" unique_id=1860413097 instance=ExtResource("1_4w763")]
+length = 16
+
+[node name="ObstacleScaler" parent="." index="0" unique_id=550516647]
+region_length = 16
+
+[node name="Label" parent="ObstacleScaler" index="0" unique_id=177015975]
+text = "Region Length: 16"
+
+[node name="BackgroundUnit2" parent="Background" parent_id_path=PackedInt32Array(821254973) index="1" unique_id=1076090912 instance=ExtResource("2_mln74")]
+position = Vector2(32, 0)
+
+[node name="BackgroundUnit3" parent="Background" parent_id_path=PackedInt32Array(821254973) index="2" unique_id=349447027 instance=ExtResource("2_mln74")]
+position = Vector2(64, 0)
+
+[node name="FoxOnly" type="Sprite2D" parent="Background/BackgroundUnit3/Back/DirtBack" parent_id_path=PackedInt32Array(349447027, 1418921863) index="0" unique_id=1220929719]
+position = Vector2(-31.75, -33.25)
+texture = ExtResource("3_4w763")
+
+[node name="BackgroundUnit4" parent="Background" parent_id_path=PackedInt32Array(821254973) index="3" unique_id=697770708 instance=ExtResource("2_mln74")]
+position = Vector2(96, 0)
+
+[node name="BackgroundUnit5" parent="Background" parent_id_path=PackedInt32Array(821254973) index="4" unique_id=1724652698 instance=ExtResource("2_mln74")]
+position = Vector2(128, 0)
+
+[node name="BackgroundUnit6" parent="Background" parent_id_path=PackedInt32Array(821254973) index="5" unique_id=335234355 instance=ExtResource("2_mln74")]
+position = Vector2(160, 0)
+
+[node name="BackgroundUnit7" parent="Background" parent_id_path=PackedInt32Array(821254973) index="6" unique_id=1952097014 instance=ExtResource("2_mln74")]
+position = Vector2(192, 0)
+
+[node name="BackgroundUnit8" parent="Background" parent_id_path=PackedInt32Array(821254973) index="7" unique_id=738648803 instance=ExtResource("2_mln74")]
+position = Vector2(224, 0)
+
+[node name="BackgroundUnit9" parent="Background" parent_id_path=PackedInt32Array(821254973) index="8" unique_id=90139569 instance=ExtResource("2_mln74")]
+position = Vector2(256, 0)
+
+[node name="BackgroundUnit10" parent="Background" parent_id_path=PackedInt32Array(821254973) index="9" unique_id=538956213 instance=ExtResource("2_mln74")]
+position = Vector2(288, 0)
+
+[node name="BackgroundUnit11" parent="Background" parent_id_path=PackedInt32Array(821254973) index="10" unique_id=138251905 instance=ExtResource("2_mln74")]
+position = Vector2(320, 0)
+
+[node name="BackgroundUnit12" parent="Background" parent_id_path=PackedInt32Array(821254973) index="11" unique_id=1507240929 instance=ExtResource("2_mln74")]
+position = Vector2(352, 0)
+
+[node name="BackgroundUnit13" parent="Background" parent_id_path=PackedInt32Array(821254973) index="12" unique_id=1900359609 instance=ExtResource("2_mln74")]
+position = Vector2(384, 0)
+
+[node name="BackgroundUnit14" parent="Background" parent_id_path=PackedInt32Array(821254973) index="13" unique_id=606706059 instance=ExtResource("2_mln74")]
+position = Vector2(416, 0)
+
+[node name="BackgroundUnit15" parent="Background" parent_id_path=PackedInt32Array(821254973) index="14" unique_id=1790075530 instance=ExtResource("2_mln74")]
+position = Vector2(448, 0)
+
+[node name="BackgroundUnit16" parent="Background" parent_id_path=PackedInt32Array(821254973) index="15" unique_id=553384107 instance=ExtResource("2_mln74")]
+position = Vector2(480, 0)
+
+[node name="BaseObstacle" parent="Obstacles" parent_id_path=PackedInt32Array(854876372) index="0" unique_id=148272063 node_paths=PackedStringArray("hide_if_proper_mask") instance=ExtResource("4_cib8m")]
+position = Vector2(106.5, 119.75)
+stopForMask = 2
+hide_if_proper_mask = NodePath("GateOpen/GateClosed")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/BaseObstacle/LeftColliders" parent_id_path=PackedInt32Array(148272063, 1654863702) index="1" unique_id=26057097]
+position = Vector2(88.75, -91.5)
+shape = SubResource("RectangleShape2D_q832a")
+debug_color = Color(0.7, 0, 0, 0.41960785)
+
+[node name="GateOpen" type="Sprite2D" parent="Obstacles/BaseObstacle" index="2" unique_id=227900203]
+position = Vector2(79.5, -64.75)
+texture = ExtResource("5_c6vtb")
+
+[node name="GateR" type="Sprite2D" parent="Obstacles/BaseObstacle/GateOpen" index="0" unique_id=180075987]
+z_index = 50
+position = Vector2(21.5, 0)
+texture = ExtResource("6_gittm")
+
+[node name="GateClosed" type="Sprite2D" parent="Obstacles/BaseObstacle/GateOpen" index="1" unique_id=614021570]
+texture = ExtResource("7_s6407")
+
+[editable path="Background/BackgroundUnit3"]
+[editable path="Obstacles/BaseObstacle"]

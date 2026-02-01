@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d3owqlk0biu11" path="res://Art/Obstacles/building/awning_short.png" id="10_bewip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6sm7"]
-size = Vector2(55.75, 4.75)
+size = Vector2(59.875, 4.75)
 
 [node name="Dirt4" unique_id=1860413097 instance=ExtResource("1_e3n4f")]
 length = 20
@@ -98,7 +98,7 @@ texture = ExtResource("8_hmffr")
 position = Vector2(2, 28)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/BaseObstacle7/TopColliders" parent_id_path=PackedInt32Array(148272063, 767947608) index="1" unique_id=1792949076]
-position = Vector2(18.25, -58)
+position = Vector2(16.8125, -54)
 shape = SubResource("RectangleShape2D_b6sm7")
 one_way_collision = true
 
@@ -180,7 +180,7 @@ position = Vector2(-5.25, 12.5)
 position = Vector2(2, 28)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/BaseObstacle8/TopColliders" index="1" unique_id=1086919436]
-position = Vector2(16, -58)
+position = Vector2(16, -56)
 shape = SubResource("RectangleShape2D_b6sm7")
 one_way_collision = true
 
@@ -208,7 +208,7 @@ position = Vector2(-22.5, 12.5)
 position = Vector2(2, 28)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/BaseObstacle10/TopColliders" index="1" unique_id=131414953]
-position = Vector2(16.25, -58)
+position = Vector2(16.25, -56)
 shape = SubResource("RectangleShape2D_b6sm7")
 one_way_collision = true
 
@@ -226,7 +226,7 @@ position = Vector2(10, -5)
 texture = ExtResource("10_bewip")
 
 [node name="CollisionShape2D" parent="Obstacles/BaseObstacle11/TopColliders" parent_id_path=PackedInt32Array(1626021731, 767947608) index="0" unique_id=366360781]
-position = Vector2(-1.5, -24.75)
+position = Vector2(-1.5, -22.75)
 
 [node name="CollisionShape2D" parent="Obstacles/BaseObstacle11/LeftColliders" parent_id_path=PackedInt32Array(1626021731, 1654863702) index="0" unique_id=619730459]
 position = Vector2(-21.75, 57.5)

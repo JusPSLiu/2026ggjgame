@@ -14,6 +14,6 @@ func set_mask(index : int):
 	var i = 0
 	for child in get_children():
 		if (index == i):
-			child.position.y = -10
+			child.position.y = 10
 		else: child.position.y = 0
 		i+=1

@@ -3,6 +3,7 @@ extends Node2D
 
 var loadedAhead : float = 0
 
+@export var StartRegion : Resource
 @export var DirtRegions : Array[Resource]
 @export_group("DEBUG MODE")
 @export var debugEnabled : bool = false
@@ -44,9 +45,12 @@ func _process(delta: float) -> void:
 			GlobalVariables.deathpos += 200
 
 func get_random_region():
+	if (GlobalVariables.xpos < 100):
+		return StartRegion.instantiate()
 	if (GlobalVariables.xpos < 10000):
 		# under ten thousand units; dirt region
 		return DirtRegions[region_number_generator(DirtRegions.size())].instantiate()
+	return DirtRegions[region_number_generator(DirtRegions.size())].instantiate()
 
 # number generator that WILL generate different number each time
 func region_number_generator(max_size : int):
