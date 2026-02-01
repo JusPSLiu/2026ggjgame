@@ -1,17 +1,354 @@
 [gd_scene format=3 uid="uid://d0bmxv6xgx70o"]
 
+[ext_resource type="Script" uid="uid://dgrb0wmb6j540" path="res://Scripts/objects/coin.gd" id="1_7gm04"]
 [ext_resource type="Texture2D" uid="uid://tsl2l4uyglul" path="res://Art/Icons/Coin.png" id="1_d060y"]
+[ext_resource type="Texture2D" uid="uid://b6di6buxfti1h" path="res://Art/Icons/Coin_back.png" id="1_n7o06"]
+[ext_resource type="Texture2D" uid="uid://blggsc48ylswj" path="res://Art/Icons/Coin_side.png" id="1_o56yo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o56yo"]
 radius = 9.055386
 
+[sub_resource type="Animation" id="Animation_n7o06"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/CoinFront:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/CoinFront:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/CoinSide:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/CoinBack:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite/CoinBack:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7gm04"]
+resource_name = "spin"
+length = 0.8
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/CoinFront:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(2, 0), Vector2(0, 0), Vector2(-2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/CoinFront:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1), Vector2(0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/CoinSide:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/CoinBack:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(-2, 0), Vector2(0, 0), Vector2(2, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite/CoinBack:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1), Vector2(0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i5b87"]
+resource_name = "spin"
+length = 0.2
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/CoinFront:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(2, 0), Vector2(0, 0), Vector2(-2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/CoinFront:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1), Vector2(0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/CoinSide:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/CoinBack:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(-2, 0), Vector2(0, 0), Vector2(2, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite/CoinBack:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.6666667, 1.5, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1), Vector2(0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5b87"]
+_data = {
+&"RESET": SubResource("Animation_n7o06"),
+&"spin": SubResource("Animation_7gm04"),
+&"spin_fast": SubResource("Animation_i5b87")
+}
+
+[sub_resource type="Animation" id="Animation_x7knc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hstcd"]
+resource_name = "collected"
+length = 0.4
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoinSpinner")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"spin_fast", -1, 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(4, 4, 4, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(4, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.33333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_87aim"]
+_data = {
+&"RESET": SubResource("Animation_x7knc"),
+&"collected": SubResource("Animation_hstcd")
+}
+
 [node name="Coin" type="Node2D" unique_id=1249391020]
+script = ExtResource("1_7gm04")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1936292889]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=286742641]
 shape = SubResource("CircleShape2D_o56yo")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=583102801]
+[node name="CoinSpinner" type="AnimationPlayer" parent="." unique_id=1822899527]
+libraries/ = SubResource("AnimationLibrary_i5b87")
+autoplay = &"spin"
+
+[node name="Collected" type="AnimationPlayer" parent="." unique_id=144501371]
+libraries/ = SubResource("AnimationLibrary_87aim")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1159514125]
+
+[node name="CoinBack" type="Sprite2D" parent="Sprite" unique_id=1224033028]
+texture_filter = 1
+texture = ExtResource("1_n7o06")
+
+[node name="CoinSide" type="Sprite2D" parent="Sprite" unique_id=1326203893]
+texture = ExtResource("1_o56yo")
+
+[node name="CoinFront" type="Sprite2D" parent="Sprite" unique_id=583102801]
 texture_filter = 1
 texture = ExtResource("1_d060y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

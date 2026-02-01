@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="2_yqdep"]
 [ext_resource type="PackedScene" uid="uid://bavf52o0icic0" path="res://Prefabs/Obstacles/single_box.tscn" id="3_e675m"]
 [ext_resource type="Texture2D" uid="uid://ce46j23b772e" path="res://Art/Obstacles/box.png" id="4_yqdep"]
+[ext_resource type="PackedScene" uid="uid://d0bmxv6xgx70o" path="res://Scenes/Things/coin.tscn" id="5_ctgvm"]
 
 [node name="BaseRegion" unique_id=1860413097 instance=ExtResource("1_e675m")]
 length = 32
@@ -119,5 +120,8 @@ position = Vector2(300.75, 43.25)
 [node name="Box" type="Sprite2D" parent="Obstacles/BaseObstacle3" index="2" unique_id=485013508]
 position = Vector2(8, 18)
 texture = ExtResource("4_yqdep")
+
+[node name="Coin" parent="Obstacles/BaseObstacle3" index="4" unique_id=1249391020 instance=ExtResource("5_ctgvm")]
+position = Vector2(37.25, -22.5)
 
 [editable path="Obstacles/BaseObstacle3"]

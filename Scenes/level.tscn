@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxon0mk8dgivo"]
 
 [ext_resource type="Script" uid="uid://dhuf43g0oc0qo" path="res://Scripts/regions/regions_controller.gd" id="1_tumq0"]
+[ext_resource type="Shader" uid="uid://c8o24xvbqn85x" path="res://Scripts/shaders/crt.gdshader" id="2_8c0lf"]
 [ext_resource type="PackedScene" uid="uid://j43jbjtdv6gi" path="res://Prefabs/Regions/Dirt/dirt_1.tscn" id="2_81xng"]
 [ext_resource type="PackedScene" uid="uid://bce7j5jksxl8h" path="res://Scenes/Overlay/pause_menu.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://ccfhqh8b837fa" path="res://Scenes/Things/player.tscn" id="3_6phgx"]
@@ -13,8 +14,20 @@ shader_parameter/offset = 0.999999977648
 shader_parameter/pixel_size = 4
 shader_parameter/screen_size = Vector2(640, 360)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bvt00"]
+shader = ExtResource("2_8c0lf")
+shader_parameter/mask_type = 1
+shader_parameter/curve = 0.0
+shader_parameter/sharpness = 0.6666667
+shader_parameter/color_offset = 0.0
+shader_parameter/mask_brightness = 1.0
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/aspect = 0.75
+shader_parameter/wobble_strength = 0.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51e2h"]
-size = Vector2(160, 20)
+size = Vector2(160, 20.25)
 
 [node name="level" type="Node2D" unique_id=1462267929]
 scale = Vector2(4, 4)
@@ -44,7 +57,7 @@ visible = false
 
 [node name="CRT" type="ColorRect" parent="Shaders/CanvasLayer" unique_id=568129605]
 z_index = 10
-material = SubResource("ShaderMaterial_754fn")
+material = SubResource("ShaderMaterial_bvt00")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -54,11 +67,11 @@ grow_vertical = 2
 [node name="CollisionBorder" type="StaticBody2D" parent="." unique_id=1262617687]
 
 [node name="floor" type="CollisionShape2D" parent="CollisionBorder" unique_id=1792834000]
-position = Vector2(80, 96)
+position = Vector2(80, 95.875)
 shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="ceiliing" type="CollisionShape2D" parent="CollisionBorder" unique_id=1801620547]
-position = Vector2(80, 0)
+position = Vector2(80, -5.5)
 shape = SubResource("RectangleShape2D_51e2h")
 
 [node name="RegionsController" type="Node2D" parent="." unique_id=641047851]
