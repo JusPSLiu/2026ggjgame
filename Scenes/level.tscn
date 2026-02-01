@@ -75,3 +75,5 @@ visible = false
 [node name="Player" parent="." unique_id=1281925854 instance=ExtResource("3_6phgx")]
 position = Vector2(32, 70)
 scale = Vector2(1, 1)
+
+[editable path="PauseMenu"]

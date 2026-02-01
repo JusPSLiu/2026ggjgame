@@ -3,3 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://bbpv2b76nfspe" path="res://Prefabs/Background/background_unit.tscn" id="1_hxslo"]
 
 [node name="BackgroundUnit" unique_id=1076090912 instance=ExtResource("1_hxslo")]
+
+[node name="ColorRect" parent="Ground/CeilingDirt" parent_id_path=PackedInt32Array(1878110190) index="0" unique_id=1678275686]
+z_index = 6
+
+[node name="CeilingDirt2" parent="Ground/CeilingDirt" parent_id_path=PackedInt32Array(1878110190) index="1" unique_id=1390192135]
+z_index = 5
+
+[node name="CeilingDirt3" parent="Ground/CeilingDirt" parent_id_path=PackedInt32Array(1878110190) index="2" unique_id=625535271]
+position = Vector2(0, -2)
+offset = Vector2(0, 8)
+region_rect = Rect2(0, 3, 36, 16)

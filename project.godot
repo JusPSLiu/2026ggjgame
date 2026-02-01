@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="New Game Project"
+run/main_scene="uid://baaf6jwy83j0o"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,6 +23,7 @@ buses/default_bus_layout="uid://b8wr0hwoqop4v"
 
 SignalBus="*uid://b5nklvgc306b2"
 GlobalVariables="*uid://b54755iipmjxy"
+Music="*uid://leynegsf8w03"
 
 [display]
 

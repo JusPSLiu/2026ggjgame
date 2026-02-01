@@ -16,7 +16,15 @@ func _process(delta: float) -> void:
 	while (GlobalVariables.xpos > loadedAhead):
 		# TODO: RANDOMIZE KID
 		var newkid = DirtRegions[0].instantiate()
-		newkid.offset = 160
+		
+		# offset the new kid
+		newkid.offset = 260
 		loadedAhead += (newkid.length)*32
 		newkid.hide()
 		add_child(newkid)
+		
+		# if this is the first one then jump ahead so doesnt look glitchy 
+		if (GlobalVariables.xpos < 200):
+			# initial jump ahead so skip the glitchiness
+			GlobalVariables.xpos += 200
+			GlobalVariables.deathpos += 200

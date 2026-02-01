@@ -2,17 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bxruvlbqqvnbu" path="res://Scenes/Overlay/transition.tscn" id="1_po227"]
 [ext_resource type="Texture2D" uid="uid://dyw0l4qyfkgjk" path="res://Art/UI/buttons/play_button.png" id="1_qyra1"]
+[ext_resource type="Texture2D" uid="uid://bi3cqftfj6sab" path="res://Art/UI/backgrounds/mask_title.png" id="1_x2sej"]
 [ext_resource type="Texture2D" uid="uid://b8i2m5ubcax2p" path="res://Art/UI/buttons/play_button_hover.png" id="2_lyuk6"]
 [ext_resource type="Texture2D" uid="uid://bv1apdval7j5d" path="res://Art/UI/buttons/shop_button.png" id="3_xdkfq"]
 [ext_resource type="Texture2D" uid="uid://ss6keadomqj2" path="res://Art/UI/buttons/shop_button_hover.png" id="4_x2sej"]
-
-[sub_resource type="Gradient" id="Gradient_po227"]
-colors = PackedColorArray(0, 0, 0, 1, 0.42, 0.29988, 0.14279999, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_q81kl"]
-gradient = SubResource("Gradient_po227")
-fill_from = Vector2(1, 1)
-fill_to = Vector2(0.43019944, 0)
+[ext_resource type="AudioStream" uid="uid://bsmmbt7tjl3si" path="res://Audio/UI/button.wav" id="7_6pqua"]
 
 [node name="TitleScreen" type="Control" unique_id=736671996]
 layout_mode = 3
@@ -29,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_q81kl")
+texture = ExtResource("1_x2sej")
 
 [node name="PlayButton" type="TextureButton" parent="." unique_id=141098780]
 layout_mode = 1
@@ -74,20 +68,10 @@ visible = false
 texture_filter = 6
 layout_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=2065478075]
-layout_mode = 0
-offset_left = 19.0
-offset_top = -15.0
-offset_right = 594.0
-offset_bottom = 117.0
-theme_override_colors/font_color = Color(0.50928617, 0.50928617, 0.50928617, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 6
-theme_override_constants/shadow_offset_y = 6
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 96
-text = "Maskollapse"
+[node name="buttonSounds" type="AudioStreamPlayer" parent="." unique_id=674421191]
+stream = ExtResource("7_6pqua")
 
+[connection signal="pressed" from="PlayButton" to="buttonSounds" method="play"]
 [connection signal="pressed" from="PlayButton" to="Transition" method="fadeToScene" binds= ["res://Scenes/level.tscn"]]
+[connection signal="pressed" from="ShopButton" to="buttonSounds" method="play"]
 [connection signal="pressed" from="ShopButton" to="Transition" method="fadeToScene" binds= ["res://Scenes/level.tscn"]]

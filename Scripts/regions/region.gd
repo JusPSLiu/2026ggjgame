@@ -8,7 +8,7 @@ var delPos = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	scale = Vector2.ONE
-	delPos = GlobalVariables.xpos + length*32 + offset
+	delPos = GlobalVariables.xpos + length*32 + offset + 32
 	var kids = find_children("*", "obstacle")
 	for kid in kids: kid.hide()
 	show()

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bl32ika5sftry"]
 
 [ext_resource type="Script" uid="uid://b2wdp0bfay1od" path="res://Scripts/regions/region.gd" id="1_6gwof"]
-[ext_resource type="Script" uid="uid://58mvgmdjhs3o" path="res://Scenes/Scripts/tools/obstacle_scaler.gd" id="2_1mkl1"]
+[ext_resource type="Script" uid="uid://58mvgmdjhs3o" path="res://Scripts/tools/obstacle_scaler.gd" id="2_1mkl1"]
 [ext_resource type="PackedScene" uid="uid://caml1341kphhs" path="res://Prefabs/Background/dirt_background_unit.tscn" id="3_q0udu"]
 
 [node name="BaseRegion" type="Node2D" unique_id=1860413097]

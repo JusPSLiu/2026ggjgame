@@ -30,6 +30,6 @@ func set_env_pos(pos : float):
 	if (newpos * backSpeed < -88):
 		queue_free()
 	
-	if (!popped and newpos < -40):
+	if (!popped and GlobalVariables.deathpos > myPos):
 		popped = true
 		$AnimationPlayer.play("fall")

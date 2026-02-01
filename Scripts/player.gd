@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var MAX_SPEED = 100.0
+@export var DEATH_SPEED = 100.0
 const JUMP_VELOCITY = -600.0
 const GRAVITY_MULTIPLIER = 2.0
 
@@ -13,6 +14,9 @@ var mask = 0
 var coyote = 0.1
 var speed = 0
 
+func _ready():
+	GlobalVariables.deathpos = -60
+	GlobalVariables.xpos = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -33,10 +37,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		coyote = 0.1
 	
-	# handle speed (TODO: add raycast2d)
+	# handle speed
+	# running in game, check if hit if not speed up to max speed
 	if (hit_obstacle()): speed = 0
 	else: speed = lerpf(speed, MAX_SPEED, delta*4.0)
 	GlobalVariables.xpos += delta * speed
+	
+	# DEATH WALL speed
+	GlobalVariables.deathpos += delta*DEATH_SPEED
 
 	# Handles jump.
 	if Input.is_action_pressed("ui_up") and coyote > 0:
